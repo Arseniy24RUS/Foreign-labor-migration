@@ -1,0 +1,182 @@
+[
+  {
+    "activity_id": "OKVED_G",
+    "okved_section": "G",
+    "activity_name": "Торговля оптовая и розничная; ремонт автотранспортных средств и мотоциклов",
+    "value_persons": 2082549.527570465,
+    "recommended_annual_quota_persons": 2082549.527570465,
+    "foreign_labor_stock_need_persons": 28989766.271624096,
+    "cumulative_recommended_quota_persons": 28989775.382508114
+  },
+  {
+    "activity_id": "OKVED_C",
+    "okved_section": "C",
+    "activity_name": "Обрабатывающие производства",
+    "value_persons": 1260230.3882989155,
+    "recommended_annual_quota_persons": 1260230.3882989155,
+    "foreign_labor_stock_need_persons": 18987004.2039578,
+    "cumulative_recommended_quota_persons": 18988162.95972594
+  },
+  {
+    "activity_id": "OKVED_H",
+    "okved_section": "H",
+    "activity_name": "Транспортировка и хранение",
+    "value_persons": 998197.8468788414,
+    "recommended_annual_quota_persons": 998197.8468788414,
+    "foreign_labor_stock_need_persons": 13383505.233212966,
+    "cumulative_recommended_quota_persons": 13383505.233212966
+  },
+  {
+    "activity_id": "OKVED_P",
+    "okved_section": "P",
+    "activity_name": "Образование",
+    "value_persons": 953699.362934807,
+    "recommended_annual_quota_persons": 953699.362934807,
+    "foreign_labor_stock_need_persons": 12543594.801107215,
+    "cumulative_recommended_quota_persons": 12543601.637133798
+  },
+  {
+    "activity_id": "OKVED_Q",
+    "okved_section": "Q",
+    "activity_name": "Деятельность в области здравоохранения и социальных услуг",
+    "value_persons": 840662.1116927493,
+    "recommended_annual_quota_persons": 840662.1116927493,
+    "foreign_labor_stock_need_persons": 10797428.306464229,
+    "cumulative_recommended_quota_persons": 10797430.568537321
+  },
+  {
+    "activity_id": "OKVED_F",
+    "okved_section": "F",
+    "activity_name": "Строительство",
+    "value_persons": 833580.0723659793,
+    "recommended_annual_quota_persons": 833580.0723659793,
+    "foreign_labor_stock_need_persons": 12040215.468332568,
+    "cumulative_recommended_quota_persons": 12040277.891903844
+  },
+  {
+    "activity_id": "OKVED_A",
+    "okved_section": "A",
+    "activity_name": "Сельское, лесное хозяйство, охота, рыболовство и рыбоводство",
+    "value_persons": 602434.1171845667,
+    "recommended_annual_quota_persons": 602434.1171845667,
+    "foreign_labor_stock_need_persons": 8791336.1618506,
+    "cumulative_recommended_quota_persons": 8791361.411429787
+  },
+  {
+    "activity_id": "OKVED_O",
+    "okved_section": "O",
+    "activity_name": "Государственное управление и обеспечение военной безопасности; социальное обеспечение",
+    "value_persons": 582520.7150779717,
+    "recommended_annual_quota_persons": 582520.7150779717,
+    "foreign_labor_stock_need_persons": 7724179.074689161,
+    "cumulative_recommended_quota_persons": 7724184.657972997
+  },
+  {
+    "activity_id": "OKVED_N",
+    "okved_section": "N",
+    "activity_name": "Деятельность административная и сопутствующие дополнительные услуги",
+    "value_persons": 421919.9446049437,
+    "recommended_annual_quota_persons": 421919.9446049437,
+    "foreign_labor_stock_need_persons": 4980481.402506085,
+    "cumulative_recommended_quota_persons": 4980481.402506085
+  },
+  {
+    "activity_id": "OKVED_B",
+    "okved_section": "B",
+    "activity_name": "Добыча полезных ископаемых",
+    "value_persons": 401313.14208134095,
+    "recommended_annual_quota_persons": 401313.14208134095,
+    "foreign_labor_stock_need_persons": 5306263.036102272,
+    "cumulative_recommended_quota_persons": 5306263.036102272
+  },
+  {
+    "activity_id": "OKVED_D",
+    "okved_section": "D",
+    "activity_name": "Обеспечение электрической энергией, газом и паром; кондиционирование воздуха",
+    "value_persons": 307687.80621149315,
+    "recommended_annual_quota_persons": 307687.80621149315,
+    "foreign_labor_stock_need_persons": 3621217.278997016,
+    "cumulative_recommended_quota_persons": 3621217.278997016
+  },
+  {
+    "activity_id": "OKVED_M",
+    "okved_section": "M",
+    "activity_name": "Деятельность профессиональная, научная и техническая",
+    "value_persons": 292323.6656860551,
+    "recommended_annual_quota_persons": 292323.6656860551,
+    "foreign_labor_stock_need_persons": 3926024.6320370925,
+    "cumulative_recommended_quota_persons": 3926290.349234889
+  },
+  {
+    "activity_id": "OKVED_L",
+    "okved_section": "L",
+    "activity_name": "Деятельность по операциям с недвижимым имуществом",
+    "value_persons": 265601.0386919992,
+    "recommended_annual_quota_persons": 265601.0386919992,
+    "foreign_labor_stock_need_persons": 3262301.322352683,
+    "cumulative_recommended_quota_persons": 3262301.322352683
+  },
+  {
+    "activity_id": "OKVED_I",
+    "okved_section": "I",
+    "activity_name": "Деятельность гостиниц и предприятий общественного питания",
+    "value_persons": 256111.68467359737,
+    "recommended_annual_quota_persons": 256111.68467359737,
+    "foreign_labor_stock_need_persons": 3270996.9555798727,
+    "cumulative_recommended_quota_persons": 3270996.9555798727
+  },
+  {
+    "activity_id": "OKVED_S",
+    "okved_section": "S",
+    "activity_name": "Предоставление прочих видов услуг",
+    "value_persons": 247266.47683177333,
+    "recommended_annual_quota_persons": 247266.47683177333,
+    "foreign_labor_stock_need_persons": 2928224.9749877458,
+    "cumulative_recommended_quota_persons": 2928224.9749877458
+  },
+  {
+    "activity_id": "OKVED_J",
+    "okved_section": "J",
+    "activity_name": "Деятельность в области информации и связи",
+    "value_persons": 184271.2989290166,
+    "recommended_annual_quota_persons": 184271.2989290166,
+    "foreign_labor_stock_need_persons": 2240541.4755432177,
+    "cumulative_recommended_quota_persons": 2240541.4755432177
+  },
+  {
+    "activity_id": "OKVED_R",
+    "okved_section": "R",
+    "activity_name": "Деятельность в области культуры, спорта, организации досуга и развлечений",
+    "value_persons": 146671.1128270415,
+    "recommended_annual_quota_persons": 146671.1128270415,
+    "foreign_labor_stock_need_persons": 1697724.0505272006,
+    "cumulative_recommended_quota_persons": 1697724.0505272006
+  },
+  {
+    "activity_id": "OKVED_K",
+    "okved_section": "K",
+    "activity_name": "Деятельность финансовая и страховая",
+    "value_persons": 139038.5027629175,
+    "recommended_annual_quota_persons": 139038.5027629175,
+    "foreign_labor_stock_need_persons": 1555708.4538664988,
+    "cumulative_recommended_quota_persons": 1555708.4538664988
+  },
+  {
+    "activity_id": "OKVED_E",
+    "okved_section": "E",
+    "activity_name": "Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений",
+    "value_persons": 54702.119442591975,
+    "recommended_annual_quota_persons": 54702.119442591975,
+    "foreign_labor_stock_need_persons": 604329.4840111947,
+    "cumulative_recommended_quota_persons": 604374.8084821675
+  },
+  {
+    "activity_id": "OKVED_T",
+    "okved_section": "T",
+    "activity_name": "Деятельность домашних хозяйств как работодателей; недифференцированная деятельность частных домашних хозяйств по производству товаров и оказанию услуг для собственного потребления",
+    "value_persons": 1829.297546373351,
+    "recommended_annual_quota_persons": 1829.297546373351,
+    "foreign_labor_stock_need_persons": 15273.44843757441,
+    "cumulative_recommended_quota_persons": 15273.44843757441
+  }
+]

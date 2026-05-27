@@ -1,0 +1,71 @@
+{
+  "dashboard_title": "Потребность в трудовых ресурсах по отраслям и регионам России",
+  "source_csv": "foreign_labor_migration_need_region_sector_year.csv",
+  "source_status": "final_migration_need",
+  "value_column": "recommended_annual_quota_persons",
+  "dashboard_value_column": "dashboard_value_persons",
+  "metric_kind": "recommended_annual_migration_quota_flow",
+  "metric_label_ru": "Рекомендуемая годовая квота иностранных работников после учета внутреннего ресурса и резерва безработных",
+  "metric_options": {
+    "recommended_annual_quota_persons": "Рекомендуемая годовая квота",
+    "foreign_labor_stock_need_persons": "Дефицит на конец года",
+    "cumulative_recommended_quota_persons": "Накопленная квота с 2025 г."
+  },
+  "rows": 43446,
+  "dashboard_status": "final_migration_need",
+  "status_label_ru": "Расчет рекомендуемой годовой квоты и stock-дефицита завершен",
+  "warnings": [
+    "Расчет не является автоматической квотой без профессионально-квалификационной матрицы.",
+    "Показатель dashboard_value_persons по умолчанию является рекомендуемой годовой квотой/потоком, а не stock-дефицитом.",
+    "Запас потребности сохранен в поле foreign_labor_stock_need_persons.",
+    "Старое поле annual_foreign_labor_quota_persons сохранено как alias; административная квота v5 = recommended_annual_quota_persons."
+  ],
+  "year_range": [
+    2025,
+    2050
+  ],
+  "region_count": 85,
+  "sector_count": 20,
+  "population_scenario": [
+    "noMIG"
+  ],
+  "working_age_definition": [
+    "15-72"
+  ],
+  "productivity_scenario": [
+    "champion"
+  ],
+  "supply_allocation_scenario": [
+    "empirical_bounded_transition"
+  ],
+  "generated_at_utc": "2026-05-27T13:56:30.802855+00:00",
+  "model_version": "foreign_labor_quota_v5_oecd_champion_mean_reverting_productivity_empirical_transition",
+  "world_growth_source": "OECD Economic Outlook 117 long-term scenarios / OECD Long-Term Model",
+  "world_growth_url": "https://sdmx.oecd.org/public/rest/data/OECD.ECO.MAD,DSD_EO_LTB@DF_EO_LTB/W..BAU1.A?startPeriod=2024&endPeriod=2050&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+  "world_growth_access_date": "2026-05-27",
+  "world_growth_scenario": "BAU1",
+  "assumptions": {
+    "base_demography": "noMIG is the base because withMIG already includes migration.",
+    "main_publication_scenario": "noMIG x 15-72 x champion x empirical_bounded_transition",
+    "foreign_labor_need_interpretation": "foreign_labor_stock_need_persons is stock; recommended_annual_quota_persons is the administrative yearly quota/flow. Never sum stock-year values as unique migrants.",
+    "unemployment_reserve": "ILO unemployment-rate reserve is computed as unemployed = employed * u_pct / (100 - u_pct) and allocated by the selected policy."
+  },
+  "map": {
+    "status": "ok",
+    "geojson_path": "data/russia_regions.geojson",
+    "geo_feature_count": 89,
+    "dashboard_region_count": 85,
+    "matched_regions": 85,
+    "unmatched_dashboard_regions": [],
+    "unmatched_geo_features": [
+      "Донецкая Народная Республика",
+      "Запорожская область",
+      "Луганская Народная Республика",
+      "Херсонская область"
+    ],
+    "notes": [
+      "GeoJSON matched through Name_full with explicit aliases for federal cities and autonomous okrug naming variants.",
+      "Extra GeoJSON features may remain outside the 85-region model universe."
+    ]
+  }
+}

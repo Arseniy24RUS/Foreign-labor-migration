@@ -1,0 +1,682 @@
+[
+  {
+    "territory_id": "TER020",
+    "territory_name": "Город Москва столица Российской Федерации город федерального значения",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 8509239.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER012",
+    "territory_name": "Московская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 3979449.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER033",
+    "territory_name": "Город Санкт-Петербург город федерального значения",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 3417644.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER038",
+    "territory_name": "Краснодарский край",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 2901263.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER041",
+    "territory_name": "Ростовская область",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 2134783.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER068",
+    "territory_name": "Свердловская область",
+    "federal_district_name": "Уральский федеральный округ",
+    "employment_persons": 2104530.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER055",
+    "territory_name": "Республика Татарстан (Татарстан)",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 2051792.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER073",
+    "territory_name": "Челябинская область",
+    "federal_district_name": "Уральский федеральный округ",
+    "employment_persons": 1805920.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER052",
+    "territory_name": "Республика Башкортостан",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 1728297.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER060",
+    "territory_name": "Нижегородская область",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 1628555.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER063",
+    "territory_name": "Самарская область",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 1626489.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER079",
+    "territory_name": "Красноярский край",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 1445535.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER050",
+    "territory_name": "Ставропольский край",
+    "federal_district_name": "Северо-Кавказский федеральный округ",
+    "employment_persons": 1411026.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER082",
+    "territory_name": "Новосибирская область",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 1313955.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER044",
+    "territory_name": "Республика Дагестан",
+    "federal_district_name": "Северо-Кавказский федеральный округ",
+    "employment_persons": 1268896.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER006",
+    "territory_name": "Воронежская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 1173364.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER040",
+    "territory_name": "Волгоградская область",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 1169162.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER081",
+    "territory_name": "Кемеровская область - Кузбасс",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 1153708.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER064",
+    "territory_name": "Саратовская область",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 1147924.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER058",
+    "territory_name": "Пермский край",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 1129588.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER080",
+    "territory_name": "Иркутская область",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 1102603.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER070",
+    "territory_name": "Ханты-Мансийский автономный округ - Югра (Тюменская область)",
+    "federal_district_name": "Уральский федеральный округ",
+    "employment_persons": 1099101.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER078",
+    "territory_name": "Алтайский край",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 1069505.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER090",
+    "territory_name": "Приморский край",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 960319.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER037",
+    "territory_name": "Республика Крым",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 913076.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER029",
+    "territory_name": "Ленинградская область",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 893667.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER061",
+    "territory_name": "Оренбургская область",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 866229.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER083",
+    "territory_name": "Омская область",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 831937.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER003",
+    "territory_name": "Белгородская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 772796.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER072",
+    "territory_name": "Тюменская область (кроме Ханты-Мансийского автономного округа-Югры и Ямало-Ненецкого автономного округа)",
+    "federal_district_name": "Уральский федеральный округ",
+    "employment_persons": 762556.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER018",
+    "territory_name": "Тульская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 741866.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER091",
+    "territory_name": "Хабаровский край",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 696546.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER056",
+    "territory_name": "Удмуртская Республика",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 679205.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER005",
+    "territory_name": "Владимирская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 643465.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER017",
+    "territory_name": "Тверская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 592371.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER019",
+    "territory_name": "Ярославская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 591956.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER062",
+    "territory_name": "Пензенская область",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 588816.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER049",
+    "territory_name": "Чеченская Республика",
+    "federal_district_name": "Северо-Кавказский федеральный округ",
+    "employment_persons": 575432.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER011",
+    "territory_name": "Липецкая область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 569624.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER065",
+    "territory_name": "Ульяновская область",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 556142.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER088",
+    "territory_name": "Республика Саха (Якутия)",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 541114.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER008",
+    "territory_name": "Калужская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 540322.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER028",
+    "territory_name": "Калининградская область",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 533322.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER059",
+    "territory_name": "Кировская область",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 532412.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER084",
+    "territory_name": "Томская область",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 511155.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER004",
+    "territory_name": "Брянская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 510294.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER057",
+    "territory_name": "Чувашская Республика - Чувашия",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 509594.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER010",
+    "territory_name": "Курская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 508088.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER027",
+    "territory_name": "Вологодская область",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 499652.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER014",
+    "territory_name": "Рязанская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 493284.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER039",
+    "territory_name": "Астраханская область",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 484784.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER016",
+    "territory_name": "Тамбовская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 459324.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER087",
+    "territory_name": "Забайкальский край",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 428173.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER007",
+    "territory_name": "Ивановская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 427533.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER026",
+    "territory_name": "Архангельская область (кроме Ненецкого автономного округа)",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 426518.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER071",
+    "territory_name": "Ямало-Ненецкий автономный округ (Тюменская область)",
+    "federal_district_name": "Уральский федеральный округ",
+    "employment_persons": 411095.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER092",
+    "territory_name": "Амурская область",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 402117.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER015",
+    "territory_name": "Смоленская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 401939.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER046",
+    "territory_name": "Кабардино-Балкарская Республика",
+    "federal_district_name": "Северо-Кавказский федеральный округ",
+    "employment_persons": 384645.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER086",
+    "territory_name": "Республика Бурятия",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 373205.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER054",
+    "territory_name": "Республика Мордовия",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 366823.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER023",
+    "territory_name": "Республика Коми",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 341395.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER030",
+    "territory_name": "Мурманская область",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 315849.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER067",
+    "territory_name": "Курганская область",
+    "federal_district_name": "Уральский федеральный округ",
+    "employment_persons": 313870.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER053",
+    "territory_name": "Республика Марий Эл",
+    "federal_district_name": "Приволжский федеральный округ",
+    "employment_persons": 298998.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER013",
+    "territory_name": "Орловская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 292263.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER032",
+    "territory_name": "Псковская область",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 285988.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER048",
+    "territory_name": "Республика Северная Осетия-Алания",
+    "federal_district_name": "Северо-Кавказский федеральный округ",
+    "employment_persons": 275212.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER031",
+    "territory_name": "Новгородская область",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 272716.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER094",
+    "territory_name": "Сахалинская область",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 268787.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER042",
+    "territory_name": "Город федерального значения Севастополь",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 262218.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER009",
+    "territory_name": "Костромская область",
+    "federal_district_name": "Центральный федеральный округ",
+    "employment_persons": 254040.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER077",
+    "territory_name": "Республика Хакасия",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 246216.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER022",
+    "territory_name": "Республика Карелия",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 231205.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER045",
+    "territory_name": "Республика Ингушетия",
+    "federal_district_name": "Северо-Кавказский федеральный округ",
+    "employment_persons": 198303.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER047",
+    "territory_name": "Карачаево-Черкесская Республика",
+    "federal_district_name": "Северо-Кавказский федеральный округ",
+    "employment_persons": 195049.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER089",
+    "territory_name": "Камчатский край",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 159675.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER035",
+    "territory_name": "Республика Адыгея (Адыгея)",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 159011.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER036",
+    "territory_name": "Республика Калмыкия",
+    "federal_district_name": "Южный федеральный округ (с 29.07.2016)",
+    "employment_persons": 125898.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER076",
+    "territory_name": "Республика Тыва",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 120336.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER075",
+    "territory_name": "Республика Алтай",
+    "federal_district_name": "Сибирский федеральный округ (с 03.11.2018)",
+    "employment_persons": 84064.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER093",
+    "territory_name": "Магаданская область",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 83033.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER095",
+    "territory_name": "Еврейская автономная область",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 64026.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER096",
+    "territory_name": "Чукотский автономный округ",
+    "federal_district_name": "Дальневосточный федеральный округ (с 03.11.2018)",
+    "employment_persons": 34122.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "territory_id": "TER025",
+    "territory_name": "Ненецкий автономный округ (Архангельская область)",
+    "federal_district_name": "Северо-Западный федеральный округ",
+    "employment_persons": 30668.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  }
+]

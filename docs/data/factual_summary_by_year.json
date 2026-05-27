@@ -1,0 +1,66 @@
+[
+  {
+    "year": 2017,
+    "employment_persons": 72265385.0,
+    "vrp_constant_2016_mln_rub": 75534248.6095,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 1045.234154768566,
+    "complete_data_share": 1.0
+  },
+  {
+    "year": 2018,
+    "employment_persons": 72045314.0,
+    "vrp_constant_2016_mln_rub": 77582840.4298,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 1076.861715528091,
+    "complete_data_share": 1.0
+  },
+  {
+    "year": 2019,
+    "employment_persons": 71573782.0,
+    "vrp_constant_2016_mln_rub": 78817114.96609999,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 1101.2009253066994,
+    "complete_data_share": 1.0
+  },
+  {
+    "year": 2020,
+    "employment_persons": 70132687.0,
+    "vrp_constant_2016_mln_rub": 77336148.4675,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 1102.7118990535755,
+    "complete_data_share": 1.0
+  },
+  {
+    "year": 2021,
+    "employment_persons": 71445356.0,
+    "vrp_constant_2016_mln_rub": 83034260.4167,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 1162.2065458908205,
+    "complete_data_share": 1.0
+  },
+  {
+    "year": 2022,
+    "employment_persons": 71902024.0,
+    "vrp_constant_2016_mln_rub": 83344456.7525,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 1159.1392302461472,
+    "complete_data_share": 1.0
+  },
+  {
+    "year": 2023,
+    "employment_persons": 72911205.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0,
+    "complete_data_share": 0.0
+  },
+  {
+    "year": 2024,
+    "employment_persons": 73266666.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "model_cells": 1700,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0,
+    "complete_data_share": 0.0
+  }
+]

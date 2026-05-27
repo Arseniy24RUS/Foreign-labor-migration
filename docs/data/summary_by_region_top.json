@@ -1,0 +1,682 @@
+[
+  {
+    "territory_id": "TER020",
+    "territory_name": "Город Москва столица Российской Федерации город федерального значения",
+    "value_persons": 912907.7225107242,
+    "recommended_annual_quota_persons": 912907.7225107242,
+    "foreign_labor_stock_need_persons": 10104653.402916048,
+    "cumulative_recommended_quota_persons": 10104653.402916048
+  },
+  {
+    "territory_id": "TER081",
+    "territory_name": "Кемеровская область - Кузбасс",
+    "value_persons": 780225.6102009958,
+    "recommended_annual_quota_persons": 780225.6102009958,
+    "foreign_labor_stock_need_persons": 13749803.779085545,
+    "cumulative_recommended_quota_persons": 13750743.008538852
+  },
+  {
+    "territory_id": "TER041",
+    "territory_name": "Ростовская область",
+    "value_persons": 435391.17462990293,
+    "recommended_annual_quota_persons": 435391.17462990293,
+    "foreign_labor_stock_need_persons": 7137258.04350878,
+    "cumulative_recommended_quota_persons": 7137258.04350878
+  },
+  {
+    "territory_id": "TER033",
+    "territory_name": "Город Санкт-Петербург город федерального значения",
+    "value_persons": 419887.24499031575,
+    "recommended_annual_quota_persons": 419887.24499031575,
+    "foreign_labor_stock_need_persons": 4423572.341132266,
+    "cumulative_recommended_quota_persons": 4423572.341132266
+  },
+  {
+    "territory_id": "TER023",
+    "territory_name": "Республика Коми",
+    "value_persons": 393304.4175036451,
+    "recommended_annual_quota_persons": 393304.4175036451,
+    "foreign_labor_stock_need_persons": 5669484.46902162,
+    "cumulative_recommended_quota_persons": 5669484.46902162
+  },
+  {
+    "territory_id": "TER038",
+    "territory_name": "Краснодарский край",
+    "value_persons": 392545.3946692016,
+    "recommended_annual_quota_persons": 392545.3946692016,
+    "foreign_labor_stock_need_persons": 5143009.665000701,
+    "cumulative_recommended_quota_persons": 5143009.665000701
+  },
+  {
+    "territory_id": "TER064",
+    "territory_name": "Саратовская область",
+    "value_persons": 304268.1459881844,
+    "recommended_annual_quota_persons": 304268.1459881844,
+    "foreign_labor_stock_need_persons": 4632151.0628649425,
+    "cumulative_recommended_quota_persons": 4632151.0628649425
+  },
+  {
+    "territory_id": "TER006",
+    "territory_name": "Воронежская область",
+    "value_persons": 290119.42502347083,
+    "recommended_annual_quota_persons": 290119.42502347083,
+    "foreign_labor_stock_need_persons": 4452206.061542798,
+    "cumulative_recommended_quota_persons": 4452206.061542798
+  },
+  {
+    "territory_id": "TER068",
+    "territory_name": "Свердловская область",
+    "value_persons": 279589.6712509032,
+    "recommended_annual_quota_persons": 279589.6712509032,
+    "foreign_labor_stock_need_persons": 3659928.885041045,
+    "cumulative_recommended_quota_persons": 3659928.885041045
+  },
+  {
+    "territory_id": "TER063",
+    "territory_name": "Самарская область",
+    "value_persons": 258226.10609686343,
+    "recommended_annual_quota_persons": 258226.10609686343,
+    "foreign_labor_stock_need_persons": 3117536.756225164,
+    "cumulative_recommended_quota_persons": 3117536.756225164
+  },
+  {
+    "territory_id": "TER070",
+    "territory_name": "Ханты-Мансийский автономный округ - Югра (Тюменская область)",
+    "value_persons": 254679.75645238798,
+    "recommended_annual_quota_persons": 254679.75645238798,
+    "foreign_labor_stock_need_persons": 3325154.7118128682,
+    "cumulative_recommended_quota_persons": 3325154.7118128682
+  },
+  {
+    "territory_id": "TER040",
+    "territory_name": "Волгоградская область",
+    "value_persons": 253056.89257566826,
+    "recommended_annual_quota_persons": 253056.89257566826,
+    "foreign_labor_stock_need_persons": 3623161.8037475203,
+    "cumulative_recommended_quota_persons": 3623161.8037475203
+  },
+  {
+    "territory_id": "TER079",
+    "territory_name": "Красноярский край",
+    "value_persons": 232631.63704778437,
+    "recommended_annual_quota_persons": 232631.63704778437,
+    "foreign_labor_stock_need_persons": 3442148.8225191263,
+    "cumulative_recommended_quota_persons": 3442148.8225191263
+  },
+  {
+    "territory_id": "TER060",
+    "territory_name": "Нижегородская область",
+    "value_persons": 227856.32954463083,
+    "recommended_annual_quota_persons": 227856.32954463083,
+    "foreign_labor_stock_need_persons": 2656443.1272208807,
+    "cumulative_recommended_quota_persons": 2656443.1272208807
+  },
+  {
+    "territory_id": "TER050",
+    "territory_name": "Ставропольский край",
+    "value_persons": 224681.45341495078,
+    "recommended_annual_quota_persons": 224681.45341495078,
+    "foreign_labor_stock_need_persons": 3665439.199757735,
+    "cumulative_recommended_quota_persons": 3665439.199757735
+  },
+  {
+    "territory_id": "TER073",
+    "territory_name": "Челябинская область",
+    "value_persons": 217329.08883768925,
+    "recommended_annual_quota_persons": 217329.08883768925,
+    "foreign_labor_stock_need_persons": 2848110.9128461448,
+    "cumulative_recommended_quota_persons": 2848110.9128461448
+  },
+  {
+    "territory_id": "TER090",
+    "territory_name": "Приморский край",
+    "value_persons": 212721.42545517033,
+    "recommended_annual_quota_persons": 212721.42545517033,
+    "foreign_labor_stock_need_persons": 3188019.6675774204,
+    "cumulative_recommended_quota_persons": 3188019.6675774204
+  },
+  {
+    "territory_id": "TER012",
+    "territory_name": "Московская область",
+    "value_persons": 197713.72158125497,
+    "recommended_annual_quota_persons": 197713.72158125497,
+    "foreign_labor_stock_need_persons": 1097326.4835734065,
+    "cumulative_recommended_quota_persons": 1097326.4835734065
+  },
+  {
+    "territory_id": "TER003",
+    "territory_name": "Белгородская область",
+    "value_persons": 194460.98114455596,
+    "recommended_annual_quota_persons": 194460.98114455596,
+    "foreign_labor_stock_need_persons": 2861319.2426390173,
+    "cumulative_recommended_quota_persons": 2861319.2426390173
+  },
+  {
+    "territory_id": "TER061",
+    "territory_name": "Оренбургская область",
+    "value_persons": 188359.19881987385,
+    "recommended_annual_quota_persons": 188359.19881987385,
+    "foreign_labor_stock_need_persons": 2874032.0541875074,
+    "cumulative_recommended_quota_persons": 2874032.0541875074
+  },
+  {
+    "territory_id": "TER055",
+    "territory_name": "Республика Татарстан (Татарстан)",
+    "value_persons": 185581.11122910643,
+    "recommended_annual_quota_persons": 185581.11122910643,
+    "foreign_labor_stock_need_persons": 2129423.262235376,
+    "cumulative_recommended_quota_persons": 2129423.262235376
+  },
+  {
+    "territory_id": "TER018",
+    "territory_name": "Тульская область",
+    "value_persons": 178010.57212729892,
+    "recommended_annual_quota_persons": 178010.57212729892,
+    "foreign_labor_stock_need_persons": 2464241.6205578125,
+    "cumulative_recommended_quota_persons": 2464241.6205578125
+  },
+  {
+    "territory_id": "TER005",
+    "territory_name": "Владимирская область",
+    "value_persons": 159484.02308774358,
+    "recommended_annual_quota_persons": 159484.02308774358,
+    "foreign_labor_stock_need_persons": 2478377.11887068,
+    "cumulative_recommended_quota_persons": 2478377.11887068
+  },
+  {
+    "territory_id": "TER017",
+    "territory_name": "Тверская область",
+    "value_persons": 147658.34257515136,
+    "recommended_annual_quota_persons": 147658.34257515136,
+    "foreign_labor_stock_need_persons": 2222603.425828866,
+    "cumulative_recommended_quota_persons": 2222603.425828866
+  },
+  {
+    "territory_id": "TER016",
+    "territory_name": "Тамбовская область",
+    "value_persons": 143282.7107962851,
+    "recommended_annual_quota_persons": 143282.7107962851,
+    "foreign_labor_stock_need_persons": 2244107.0930975294,
+    "cumulative_recommended_quota_persons": 2244107.0930975294
+  },
+  {
+    "territory_id": "TER010",
+    "territory_name": "Курская область",
+    "value_persons": 142173.19355468763,
+    "recommended_annual_quota_persons": 142173.19355468763,
+    "foreign_labor_stock_need_persons": 2237256.475353578,
+    "cumulative_recommended_quota_persons": 2237256.475353578
+  },
+  {
+    "territory_id": "TER078",
+    "territory_name": "Алтайский край",
+    "value_persons": 134555.8065137275,
+    "recommended_annual_quota_persons": 134555.8065137275,
+    "foreign_labor_stock_need_persons": 1420065.314047187,
+    "cumulative_recommended_quota_persons": 1420065.314047187
+  },
+  {
+    "territory_id": "TER011",
+    "territory_name": "Липецкая область",
+    "value_persons": 130403.72097147323,
+    "recommended_annual_quota_persons": 130403.72097147323,
+    "foreign_labor_stock_need_persons": 1927112.7790096195,
+    "cumulative_recommended_quota_persons": 1927112.7790096195
+  },
+  {
+    "territory_id": "TER071",
+    "territory_name": "Ямало-Ненецкий автономный округ (Тюменская область)",
+    "value_persons": 125808.05347255811,
+    "recommended_annual_quota_persons": 125808.05347255811,
+    "foreign_labor_stock_need_persons": 2137467.8741374165,
+    "cumulative_recommended_quota_persons": 2137700.911732839
+  },
+  {
+    "territory_id": "TER082",
+    "territory_name": "Новосибирская область",
+    "value_persons": 122036.3628617185,
+    "recommended_annual_quota_persons": 122036.3628617185,
+    "foreign_labor_stock_need_persons": 1222899.3328081167,
+    "cumulative_recommended_quota_persons": 1222899.3328081167
+  },
+  {
+    "territory_id": "TER062",
+    "territory_name": "Пензенская область",
+    "value_persons": 121865.85460715735,
+    "recommended_annual_quota_persons": 121865.85460715735,
+    "foreign_labor_stock_need_persons": 1621449.4172312373,
+    "cumulative_recommended_quota_persons": 1621449.4172312373
+  },
+  {
+    "territory_id": "TER004",
+    "territory_name": "Брянская область",
+    "value_persons": 120450.38832824776,
+    "recommended_annual_quota_persons": 120450.38832824776,
+    "foreign_labor_stock_need_persons": 1658854.137586512,
+    "cumulative_recommended_quota_persons": 1658854.137586512
+  },
+  {
+    "territory_id": "TER014",
+    "territory_name": "Рязанская область",
+    "value_persons": 106379.15506511412,
+    "recommended_annual_quota_persons": 106379.15506511412,
+    "foreign_labor_stock_need_persons": 1357679.4175813452,
+    "cumulative_recommended_quota_persons": 1357679.4175813452
+  },
+  {
+    "territory_id": "TER065",
+    "territory_name": "Ульяновская область",
+    "value_persons": 104259.46784070227,
+    "recommended_annual_quota_persons": 104259.46784070227,
+    "foreign_labor_stock_need_persons": 1383350.623419361,
+    "cumulative_recommended_quota_persons": 1383350.623419361
+  },
+  {
+    "territory_id": "TER026",
+    "territory_name": "Архангельская область (кроме Ненецкого автономного округа)",
+    "value_persons": 103687.25715940825,
+    "recommended_annual_quota_persons": 103687.25715940825,
+    "foreign_labor_stock_need_persons": 1507664.1058569655,
+    "cumulative_recommended_quota_persons": 1507664.1058569655
+  },
+  {
+    "territory_id": "TER007",
+    "territory_name": "Ивановская область",
+    "value_persons": 100898.65211959755,
+    "recommended_annual_quota_persons": 100898.65211959755,
+    "foreign_labor_stock_need_persons": 1452923.9739773874,
+    "cumulative_recommended_quota_persons": 1452923.9739773874
+  },
+  {
+    "territory_id": "TER030",
+    "territory_name": "Мурманская область",
+    "value_persons": 94859.85897091073,
+    "recommended_annual_quota_persons": 94859.85897091073,
+    "foreign_labor_stock_need_persons": 1401258.9676677606,
+    "cumulative_recommended_quota_persons": 1401258.9676677606
+  },
+  {
+    "territory_id": "TER028",
+    "territory_name": "Калининградская область",
+    "value_persons": 89520.52003346484,
+    "recommended_annual_quota_persons": 89520.52003346484,
+    "foreign_labor_stock_need_persons": 1178881.952247605,
+    "cumulative_recommended_quota_persons": 1178881.952247605
+  },
+  {
+    "territory_id": "TER083",
+    "territory_name": "Омская область",
+    "value_persons": 89267.02644308134,
+    "recommended_annual_quota_persons": 89267.02644308134,
+    "foreign_labor_stock_need_persons": 958416.686261736,
+    "cumulative_recommended_quota_persons": 958416.686261736
+  },
+  {
+    "territory_id": "TER054",
+    "territory_name": "Республика Мордовия",
+    "value_persons": 83532.56370532126,
+    "recommended_annual_quota_persons": 83532.56370532126,
+    "foreign_labor_stock_need_persons": 1014197.9951156814,
+    "cumulative_recommended_quota_persons": 1014197.9951156814
+  },
+  {
+    "territory_id": "TER080",
+    "territory_name": "Иркутская область",
+    "value_persons": 83507.56963309305,
+    "recommended_annual_quota_persons": 83507.56963309305,
+    "foreign_labor_stock_need_persons": 700037.4665466632,
+    "cumulative_recommended_quota_persons": 700037.4665466632
+  },
+  {
+    "territory_id": "TER052",
+    "territory_name": "Республика Башкортостан",
+    "value_persons": 83282.32860534519,
+    "recommended_annual_quota_persons": 83282.32860534519,
+    "foreign_labor_stock_need_persons": 643585.2408108187,
+    "cumulative_recommended_quota_persons": 643585.2408108187
+  },
+  {
+    "territory_id": "TER027",
+    "territory_name": "Вологодская область",
+    "value_persons": 81961.80199382271,
+    "recommended_annual_quota_persons": 81961.80199382271,
+    "foreign_labor_stock_need_persons": 1082723.9888561731,
+    "cumulative_recommended_quota_persons": 1082723.9888561731
+  },
+  {
+    "territory_id": "TER029",
+    "territory_name": "Ленинградская область",
+    "value_persons": 79377.00175293896,
+    "recommended_annual_quota_persons": 79377.00175293896,
+    "foreign_labor_stock_need_persons": 594908.7626852519,
+    "cumulative_recommended_quota_persons": 594908.7626852519
+  },
+  {
+    "territory_id": "TER084",
+    "territory_name": "Томская область",
+    "value_persons": 78815.69700340317,
+    "recommended_annual_quota_persons": 78815.69700340317,
+    "foreign_labor_stock_need_persons": 1053956.5290803872,
+    "cumulative_recommended_quota_persons": 1053956.5290803872
+  },
+  {
+    "territory_id": "TER037",
+    "territory_name": "Республика Крым",
+    "value_persons": 78197.31802156022,
+    "recommended_annual_quota_persons": 78197.31802156022,
+    "foreign_labor_stock_need_persons": 847193.3328456068,
+    "cumulative_recommended_quota_persons": 847193.3328456068
+  },
+  {
+    "territory_id": "TER019",
+    "territory_name": "Ярославская область",
+    "value_persons": 77001.85923104254,
+    "recommended_annual_quota_persons": 77001.85923104254,
+    "foreign_labor_stock_need_persons": 791489.624447937,
+    "cumulative_recommended_quota_persons": 791489.624447937
+  },
+  {
+    "territory_id": "TER015",
+    "territory_name": "Смоленская область",
+    "value_persons": 76876.67281516263,
+    "recommended_annual_quota_persons": 76876.67281516263,
+    "foreign_labor_stock_need_persons": 852796.3037205744,
+    "cumulative_recommended_quota_persons": 852796.3037205744
+  },
+  {
+    "territory_id": "TER039",
+    "territory_name": "Астраханская область",
+    "value_persons": 76735.00336564974,
+    "recommended_annual_quota_persons": 76735.00336564974,
+    "foreign_labor_stock_need_persons": 1219236.2030827575,
+    "cumulative_recommended_quota_persons": 1219236.2030827575
+  },
+  {
+    "territory_id": "TER057",
+    "territory_name": "Чувашская Республика - Чувашия",
+    "value_persons": 76250.05483673334,
+    "recommended_annual_quota_persons": 76250.05483673334,
+    "foreign_labor_stock_need_persons": 948931.9188533504,
+    "cumulative_recommended_quota_persons": 948931.9188533504
+  },
+  {
+    "territory_id": "TER013",
+    "territory_name": "Орловская область",
+    "value_persons": 73399.96233252248,
+    "recommended_annual_quota_persons": 73399.96233252248,
+    "foreign_labor_stock_need_persons": 1079195.3312375173,
+    "cumulative_recommended_quota_persons": 1079195.3312375173
+  },
+  {
+    "territory_id": "TER022",
+    "territory_name": "Республика Карелия",
+    "value_persons": 72060.58634329864,
+    "recommended_annual_quota_persons": 72060.58634329864,
+    "foreign_labor_stock_need_persons": 1093012.7766387218,
+    "cumulative_recommended_quota_persons": 1093012.7766387218
+  },
+  {
+    "territory_id": "TER053",
+    "territory_name": "Республика Марий Эл",
+    "value_persons": 59797.035120555614,
+    "recommended_annual_quota_persons": 59797.035120555614,
+    "foreign_labor_stock_need_persons": 1007317.7965633749,
+    "cumulative_recommended_quota_persons": 1007317.7965633749
+  },
+  {
+    "territory_id": "TER032",
+    "territory_name": "Псковская область",
+    "value_persons": 59159.4613846549,
+    "recommended_annual_quota_persons": 59159.4613846549,
+    "foreign_labor_stock_need_persons": 775456.1816366819,
+    "cumulative_recommended_quota_persons": 775456.1816366819
+  },
+  {
+    "territory_id": "TER008",
+    "territory_name": "Калужская область",
+    "value_persons": 59042.54019497966,
+    "recommended_annual_quota_persons": 59042.54019497966,
+    "foreign_labor_stock_need_persons": 625542.5055308972,
+    "cumulative_recommended_quota_persons": 625542.5055308972
+  },
+  {
+    "territory_id": "TER067",
+    "territory_name": "Курганская область",
+    "value_persons": 54403.59036460337,
+    "recommended_annual_quota_persons": 54403.59036460337,
+    "foreign_labor_stock_need_persons": 661473.3153383314,
+    "cumulative_recommended_quota_persons": 661473.3153383314
+  },
+  {
+    "territory_id": "TER094",
+    "territory_name": "Сахалинская область",
+    "value_persons": 54238.066646127365,
+    "recommended_annual_quota_persons": 54238.066646127365,
+    "foreign_labor_stock_need_persons": 751869.9761741483,
+    "cumulative_recommended_quota_persons": 751869.9761741483
+  },
+  {
+    "territory_id": "TER077",
+    "territory_name": "Республика Хакасия",
+    "value_persons": 51130.824277642256,
+    "recommended_annual_quota_persons": 51130.824277642256,
+    "foreign_labor_stock_need_persons": 830070.4524651655,
+    "cumulative_recommended_quota_persons": 830070.4524651655
+  },
+  {
+    "territory_id": "TER031",
+    "territory_name": "Новгородская область",
+    "value_persons": 49421.3012611344,
+    "recommended_annual_quota_persons": 49421.3012611344,
+    "foreign_labor_stock_need_persons": 614619.7277925449,
+    "cumulative_recommended_quota_persons": 614619.7277925449
+  },
+  {
+    "territory_id": "TER042",
+    "territory_name": "Город федерального значения Севастополь",
+    "value_persons": 48757.802585078454,
+    "recommended_annual_quota_persons": 48757.802585078454,
+    "foreign_labor_stock_need_persons": 771528.757774898,
+    "cumulative_recommended_quota_persons": 771528.757774898
+  },
+  {
+    "territory_id": "TER009",
+    "territory_name": "Костромская область",
+    "value_persons": 48082.44684577636,
+    "recommended_annual_quota_persons": 48082.44684577636,
+    "foreign_labor_stock_need_persons": 626625.6139205934,
+    "cumulative_recommended_quota_persons": 626625.6139205934
+  },
+  {
+    "territory_id": "TER072",
+    "territory_name": "Тюменская область (кроме Ханты-Мансийского автономного округа-Югры и Ямало-Ненецкого автономного округа)",
+    "value_persons": 47207.23494612919,
+    "recommended_annual_quota_persons": 47207.23494612919,
+    "foreign_labor_stock_need_persons": 686597.156971864,
+    "cumulative_recommended_quota_persons": 686957.1109313194
+  },
+  {
+    "territory_id": "TER056",
+    "territory_name": "Удмуртская Республика",
+    "value_persons": 37315.25234113487,
+    "recommended_annual_quota_persons": 37315.25234113487,
+    "foreign_labor_stock_need_persons": 255432.50545379744,
+    "cumulative_recommended_quota_persons": 255432.50545379744
+  },
+  {
+    "territory_id": "TER089",
+    "territory_name": "Камчатский край",
+    "value_persons": 36847.66940723182,
+    "recommended_annual_quota_persons": 36847.66940723182,
+    "foreign_labor_stock_need_persons": 555960.1263552667,
+    "cumulative_recommended_quota_persons": 555960.1263552667
+  },
+  {
+    "territory_id": "TER088",
+    "territory_name": "Республика Саха (Якутия)",
+    "value_persons": 36634.029028060846,
+    "recommended_annual_quota_persons": 36634.029028060846,
+    "foreign_labor_stock_need_persons": 398580.4763693456,
+    "cumulative_recommended_quota_persons": 398580.4763693456
+  },
+  {
+    "territory_id": "TER087",
+    "territory_name": "Забайкальский край",
+    "value_persons": 35022.17049623625,
+    "recommended_annual_quota_persons": 35022.17049623625,
+    "foreign_labor_stock_need_persons": 324884.05504249246,
+    "cumulative_recommended_quota_persons": 324884.05504249246
+  },
+  {
+    "territory_id": "TER093",
+    "territory_name": "Магаданская область",
+    "value_persons": 21756.98961389957,
+    "recommended_annual_quota_persons": 21756.98961389957,
+    "foreign_labor_stock_need_persons": 218654.41155321736,
+    "cumulative_recommended_quota_persons": 218654.41155321736
+  },
+  {
+    "territory_id": "TER095",
+    "territory_name": "Еврейская автономная область",
+    "value_persons": 17358.482112556383,
+    "recommended_annual_quota_persons": 17358.482112556383,
+    "foreign_labor_stock_need_persons": 267254.3429556982,
+    "cumulative_recommended_quota_persons": 267254.3429556982
+  },
+  {
+    "territory_id": "TER047",
+    "territory_name": "Карачаево-Черкесская Республика",
+    "value_persons": 13480.852305523977,
+    "recommended_annual_quota_persons": 13480.852305523977,
+    "foreign_labor_stock_need_persons": 165792.25202745947,
+    "cumulative_recommended_quota_persons": 165792.25202745947
+  },
+  {
+    "territory_id": "TER086",
+    "territory_name": "Республика Бурятия",
+    "value_persons": 12237.303313156215,
+    "recommended_annual_quota_persons": 12237.303313156215,
+    "foreign_labor_stock_need_persons": 110687.92129021599,
+    "cumulative_recommended_quota_persons": 110687.92129021599
+  },
+  {
+    "territory_id": "TER048",
+    "territory_name": "Республика Северная Осетия-Алания",
+    "value_persons": 11489.887205573064,
+    "recommended_annual_quota_persons": 11489.887205573064,
+    "foreign_labor_stock_need_persons": 115188.56778794105,
+    "cumulative_recommended_quota_persons": 115188.56778794105
+  },
+  {
+    "territory_id": "TER025",
+    "territory_name": "Ненецкий автономный округ (Архангельская область)",
+    "value_persons": 9862.460614410897,
+    "recommended_annual_quota_persons": 9862.460614410897,
+    "foreign_labor_stock_need_persons": 164828.3009532534,
+    "cumulative_recommended_quota_persons": 164828.3009532534
+  },
+  {
+    "territory_id": "TER096",
+    "territory_name": "Чукотский автономный округ",
+    "value_persons": 9360.23937629815,
+    "recommended_annual_quota_persons": 9360.23937629815,
+    "foreign_labor_stock_need_persons": 119871.6860308418,
+    "cumulative_recommended_quota_persons": 119871.6860308418
+  },
+  {
+    "territory_id": "TER058",
+    "territory_name": "Пермский край",
+    "value_persons": 6397.600561787207,
+    "recommended_annual_quota_persons": 6397.600561787207,
+    "foreign_labor_stock_need_persons": 10381.490974042383,
+    "cumulative_recommended_quota_persons": 10381.490974042383
+  },
+  {
+    "territory_id": "TER075",
+    "territory_name": "Республика Алтай",
+    "value_persons": 1177.0548346718679,
+    "recommended_annual_quota_persons": 1177.0548346718679,
+    "foreign_labor_stock_need_persons": 9606.241544421646,
+    "cumulative_recommended_quota_persons": 9655.28339114001
+  },
+  {
+    "territory_id": "TER035",
+    "territory_name": "Республика Адыгея (Адыгея)",
+    "value_persons": 706.8949366300094,
+    "recommended_annual_quota_persons": 706.8949366300094,
+    "foreign_labor_stock_need_persons": 1033.4736662500472,
+    "cumulative_recommended_quota_persons": 1033.4736662500472
+  },
+  {
+    "territory_id": "TER036",
+    "territory_name": "Республика Калмыкия",
+    "value_persons": 587.1473840846793,
+    "recommended_annual_quota_persons": 587.1473840846793,
+    "foreign_labor_stock_need_persons": 799.1560962713156,
+    "cumulative_recommended_quota_persons": 799.1560962713156
+  },
+  {
+    "territory_id": "TER059",
+    "territory_name": "Кировская область",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  },
+  {
+    "territory_id": "TER045",
+    "territory_name": "Республика Ингушетия",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  },
+  {
+    "territory_id": "TER044",
+    "territory_name": "Республика Дагестан",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  },
+  {
+    "territory_id": "TER049",
+    "territory_name": "Чеченская Республика",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  },
+  {
+    "territory_id": "TER046",
+    "territory_name": "Кабардино-Балкарская Республика",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  },
+  {
+    "territory_id": "TER076",
+    "territory_name": "Республика Тыва",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  },
+  {
+    "territory_id": "TER092",
+    "territory_name": "Амурская область",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  },
+  {
+    "territory_id": "TER091",
+    "territory_name": "Хабаровский край",
+    "value_persons": 0.0,
+    "recommended_annual_quota_persons": 0.0,
+    "foreign_labor_stock_need_persons": 0.0,
+    "cumulative_recommended_quota_persons": 0.0
+  }
+]

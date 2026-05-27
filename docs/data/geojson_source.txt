@@ -1,0 +1,5 @@
+Source: user-provided file `Карта_субъектов_РФ_с_данными.geojson`.
+Copied to `docs/data/russia_regions.geojson` for static GitHub Pages use.
+Feature key used by the dashboard: properties.Name_full.
+The source layer contains 89 features; the model universe contains 85 regions.
+Original feature properties also include legacy demographic/election attributes that are not used by this dashboard.

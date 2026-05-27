@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Потребность в трудовых ресурсах по отраслям и регионам России</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230B5ED7'/%3E%3Cpath d='M14 46h8V26h-8zm14 0h8V14h-8zm14 0h8V32h-8z' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/style.css?v=20260527-v5" />
+  <script src="assets/plotly-2.35.2.min.js"></script>
+  <script src="assets/app.js?v=20260527-v5" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand-block">
+        <span class="product-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <path d="M8 40h6V24H8v16Zm13 0h6V12h-6v28Zm13 0h6V19h-6v21Z" />
+            <path d="M7 8c12 0 17 8 22 13 4 4 8 7 14 7" fill="none" />
+          </svg>
+        </span>
+        <div>
+          <h1>Потребность в трудовых ресурсах по отраслям и регионам России</h1>
+          <p>Научно-презентационный дашборд: рекомендуемая годовая квота, дефицит на конец года и экономическая трудовая потребность.</p>
+        </div>
+      </div>
+      <nav class="org-logos" aria-label="Организации">
+        <a href="https://mgimo.ru/" aria-label="Официальный сайт МГИМО" title="МГИМО" target="_blank" rel="noopener noreferrer">
+          <img src="assets/mgimo-home.png" alt="МГИМО" />
+        </a>
+        <a href="https://www.fnisc.ru" aria-label="Официальный сайт ФНИСЦ" title="ФНИСЦ" target="_blank" rel="noopener noreferrer">
+          <img src="assets/fnisc.png" alt="ФНИСЦ" />
+        </a>
+      </nav>
+    </header>
+
+    <nav class="module-nav" aria-label="Разделы дашборда">
+      <a href="#overview" class="active">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9m8 10V5m8 14v-7M3 19h18" /></svg>
+        Обзор
+      </a>
+      <a href="#map-panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Zm0 0V3m6 18V6" /></svg>
+        Карта
+      </a>
+      <a href="#rankings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19h14M7 15h3V7H7v8Zm7 0h3V4h-3v11Z" /></svg>
+        Рейтинги
+      </a>
+      <a href="#atlas-panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h16M4 16h16M10 4v16M16 4v16" /></svg>
+        Атлас
+      </a>
+      <a href="#detail-panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h14" /></svg>
+        Таблица
+      </a>
+      <a href="#method-heading">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6zM14 4v4h4M8 13h8M8 17h6" /></svg>
+        Методология
+      </a>
+    </nav>
+
+    <main class="dashboard-layout">
+      <aside class="filter-rail" aria-labelledby="filters-heading">
+        <div class="rail-title">
+          <h2 id="filters-heading">Фильтры</h2>
+          <button id="reset-filters" type="button">Сбросить</button>
+        </div>
+        <p id="metric-caption" class="metric-caption">Показатель: человек</p>
+        <div class="filters-grid">
+          <label>
+            <span>Федеральный округ</span>
+            <select id="filter-district"></select>
+          </label>
+          <div class="filter-field">
+            <span>Регион</span>
+            <div class="region-multi-select">
+              <div class="region-filter-head">
+                <button id="filter-region-clear" type="button">Все регионы</button>
+                <small id="filter-region-summary">Все регионы</small>
+              </div>
+              <div id="filter-region-options" class="region-options" aria-label="Выбор регионов"></div>
+            </div>
+          </div>
+          <label>
+            <span>Отрасль ОКВЭД</span>
+            <select id="filter-sector"></select>
+          </label>
+        </div>
+      </aside>
+
+      <section class="dashboard-main" id="overview">
+        <section class="year-timeline-panel" aria-labelledby="timeline-heading">
+          <div class="timeline-head">
+            <div>
+              <h2 id="timeline-heading">Горизонт расчёта</h2>
+              <p id="timeline-caption">Выбранный год управляет KPI, картой, рейтингами, матрицей и таблицей.</p>
+            </div>
+            <strong id="timeline-year-value">-</strong>
+          </div>
+          <div class="year-timeline-control">
+            <input id="filter-year" type="hidden" value="2050" />
+            <div class="year-timeline-track">
+              <div id="year-timeline-ticks" class="year-timeline-ticks" role="listbox" aria-label="Выбор года расчёта"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="kpi-grid" aria-label="Ключевые показатели">
+          <article class="kpi-card">
+            <span class="kpi-icon people-icon" aria-hidden="true"></span>
+            <div>
+              <span>Рекомендуемая годовая квота</span>
+              <strong id="kpi-year-total">-</strong>
+              <small>человек</small>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon map-pin-icon" aria-hidden="true"></span>
+            <div>
+              <span>Дефицит на конец года</span>
+              <strong id="kpi-stock-total">-</strong>
+              <small>в выбранном году, человек</small>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon gear-icon" aria-hidden="true"></span>
+            <div>
+              <span>Резерв безработных</span>
+              <strong id="kpi-reserve-total">-</strong>
+              <small>вклад в выбранном году</small>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon clock-icon" aria-hidden="true"></span>
+            <div>
+              <span>Накопленная квота с 2025 г.</span>
+              <strong id="kpi-horizon-total">-</strong>
+              <small>последнее значение выбранного горизонта</small>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon trend-up-icon" aria-hidden="true"></span>
+            <div>
+              <span>Прогноз производительности</span>
+              <strong id="kpi-productivity">-</strong>
+              <small>средневзвешенный темп</small>
+            </div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon sector-icon" aria-hidden="true"></span>
+            <div>
+              <span>Регионально-отраслевые направления, где нужна квота</span>
+              <strong id="kpi-positive-share">-</strong>
+              <small>доля регион × отрасль</small>
+            </div>
+          </article>
+        </section>
+
+        <section class="activity-strip" aria-labelledby="activity-heading">
+          <div>
+            <h2 id="activity-heading">Виды деятельности</h2>
+            <p>Все секции ОКВЭД</p>
+          </div>
+          <div id="sector-quick-icons" class="sector-quick-icons"></div>
+        </section>
+
+        <section class="fact-base-panel" aria-labelledby="fact-base-heading">
+          <div class="section-heading compact-heading">
+            <div>
+              <h2 id="fact-base-heading">Фактическая база 2017-2024</h2>
+              <p id="fact-caption">Исторические значения, использованные для построения расчетной базы.</p>
+            </div>
+          </div>
+          <div class="fact-grid">
+            <article>
+              <span>Занятость 2024</span>
+              <strong id="fact-base-employment">-</strong>
+              <small>человек</small>
+            </article>
+            <article>
+              <span>Изменение занятости</span>
+              <strong id="fact-employment-delta">-</strong>
+              <small>2017-2024, человек</small>
+            </article>
+            <article>
+              <span>Производительность труда</span>
+              <strong id="fact-productivity">-</strong>
+              <small>последний доступный факт, тыс. руб. 2016 на человека</small>
+            </article>
+            <article>
+              <span>Покрытие занятости</span>
+              <strong id="fact-coverage">-</strong>
+              <small>модельные ячейки 2024</small>
+            </article>
+          </div>
+        </section>
+
+        <section class="economic-link-panel panel" aria-labelledby="economic-link-heading">
+          <div class="section-heading">
+            <div>
+              <h2 id="economic-link-heading">Почему экономический рост требует трудовых ресурсов</h2>
+              <p>ВРП = занятость × производительность труда. Если целевой рост выпуска выше прогнозного роста производительности, модели нужен дополнительный трудовой ресурс.</p>
+            </div>
+          </div>
+          <div class="formula-strip" aria-label="Расчетные формулы">
+            <span>ВРП = занятость × производительность</span>
+            <span>Δln ВРП ≈ Δln занятости + Δln производительности</span>
+            <span>требуемый рост занятости ≈ целевой рост ВРП − рост производительности</span>
+          </div>
+          <div class="economic-link-grid">
+            <div id="chart-growth-scatter" class="chart compact-chart"></div>
+            <div id="chart-growth-decomposition" class="chart compact-chart"></div>
+          </div>
+        </section>
+
+        <section class="overview-grid">
+          <article class="panel map-panel" id="map-panel" aria-labelledby="map-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="map-heading">Картограмма субъектов РФ</h2>
+                <p id="map-status">Загрузка геослоя...</p>
+              </div>
+            </div>
+            <div id="chart-map" class="chart map-chart"></div>
+            <div id="map-fallback" class="fallback hidden"></div>
+          </article>
+
+          <article class="panel trend-panel" aria-labelledby="trend-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="trend-heading">Рекомендуемая квота и дефицит по годам</h2>
+                <p>Годовая рекомендуемая квота, накопленная квота с 2025 г. и дефицит на конец года с маркерами 2030, 2036 и 2050.</p>
+              </div>
+            </div>
+            <div id="chart-year" class="chart compact-chart"></div>
+          </article>
+        </section>
+
+        <section class="resource-grid">
+          <article class="panel resource-panel" aria-labelledby="resource-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="resource-heading">Баланс трудовых ресурсов</h2>
+                <p>Всего требуется трудовых ресурсов, полный мобилизационный резерв безработных и внешние мигранты.</p>
+              </div>
+            </div>
+            <div id="chart-resource" class="chart compact-chart"></div>
+          </article>
+        </section>
+
+        <section class="productivity-grid">
+          <article class="panel" aria-labelledby="productivity-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="productivity-heading">Производительность труда</h2>
+                <p>Взвешенный прогноз роста производительности труда по выбранным регионам и отраслям.</p>
+              </div>
+            </div>
+            <div id="chart-productivity" class="chart compact-chart"></div>
+          </article>
+
+          <article class="panel" aria-labelledby="shares-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="shares-heading">Отраслевая структура занятости</h2>
+                <p>Доля отраслей в занятости 2024 и прогнозной структуре внутреннего трудового ресурса.</p>
+              </div>
+            </div>
+            <div id="chart-sector-shares" class="chart compact-chart"></div>
+          </article>
+        </section>
+
+        <section class="ranking-grid" id="rankings">
+          <article class="panel" aria-labelledby="regions-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="regions-heading">Рейтинг регионов</h2>
+                <p>Топ субъектов РФ за выбранный год.</p>
+              </div>
+            </div>
+            <div id="chart-region" class="chart rank-chart"></div>
+          </article>
+
+          <article class="panel" aria-labelledby="sectors-heading">
+            <div class="section-heading">
+              <div>
+                <h2 id="sectors-heading">Рейтинг отраслей</h2>
+                <p>Секции ОКВЭД за выбранный год.</p>
+              </div>
+            </div>
+            <div id="chart-sector" class="chart rank-chart"></div>
+          </article>
+        </section>
+
+        <section class="dense-grid atlas-grid">
+          <article class="panel" id="atlas-panel" aria-labelledby="atlas-heading">
+            <div class="section-heading compact-heading">
+              <div>
+                <h2 id="atlas-heading">Атлас регионально-отраслевой потребности</h2>
+                <p>Потоки федеральный округ → регион → отрасль и топ-100 ячеек выбранного года.</p>
+              </div>
+              <div class="metric-toggle" aria-label="Показатель атласа">
+                <button type="button" class="active" data-metric-key="recommended_annual_quota_persons">Годовая квота</button>
+                <button type="button" data-metric-key="foreign_labor_stock_need_persons">Дефицит</button>
+                <button type="button" data-metric-key="cumulative_recommended_quota_persons">Накопленная</button>
+              </div>
+            </div>
+            <div class="atlas-chart-grid">
+              <div id="chart-atlas-sankey" class="chart atlas-sankey-chart"></div>
+              <div id="chart-bubble-matrix" class="chart bubble-matrix-chart"></div>
+            </div>
+          </article>
+
+          <article class="panel table-panel" id="detail-panel" aria-labelledby="table-heading">
+            <div class="section-heading compact-heading">
+              <div>
+                <h2 id="table-heading">Детализация</h2>
+                <p id="table-count">-</p>
+              </div>
+              <div class="table-actions">
+                <div class="table-mode-toggle" aria-label="Режим таблицы">
+                  <button type="button" class="active" data-table-mode="forecast" aria-pressed="true">Прогноз</button>
+                  <button type="button" data-table-mode="factual" aria-pressed="false">Факт</button>
+                </div>
+                <button id="download-csv" type="button">Скачать CSV</button>
+              </div>
+            </div>
+            <label class="search-box">
+              <span>Поиск</span>
+              <input id="table-search" type="search" placeholder="Регион, округ, отрасль или ОКВЭД" />
+            </label>
+            <div class="table-wrap">
+              <table id="detail-table">
+                <thead>
+                  <tr>
+                    <th><button type="button" data-sort="territory_name">Регион</button></th>
+                    <th><button type="button" data-sort="federal_district_name">Округ</button></th>
+                    <th><button type="button" data-sort="okved_section">ОКВЭД</button></th>
+                    <th><button type="button" data-sort="activity_name">Отрасль</button></th>
+                    <th class="num"><button type="button" data-sort="recommended_annual_quota_persons">Рекомендуемая годовая квота</button></th>
+                    <th class="num"><button type="button" data-sort="foreign_labor_stock_need_persons">Дефицит на конец года</button></th>
+                    <th class="num"><button type="button" data-sort="labor_demand_required_persons">Требуемая занятость</button></th>
+                    <th class="num"><button type="button" data-sort="unemployment_reserve_sector_allocated_persons">Резерв безработных</button></th>
+                    <th class="num"><button type="button" data-sort="domestic_sector_supply_total_with_unemployment_reserve_persons">Внутренний ресурс с резервом</button></th>
+                    <th class="num"><button type="button" data-sort="productivity_growth_forecast_yearly">Прогноз производительности</button></th>
+                    <th class="num"><button type="button" data-sort="sector_share_in_region_2024">Доля отрасли 2024</button></th>
+                    <th class="num"><button type="button" data-sort="supply_allocation_share">Прогнозная доля</button></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <section class="methodology" aria-labelledby="method-heading">
+          <h2 id="method-heading">Методология и ограничения</h2>
+          <div class="method-grid">
+            <article>
+              <h3>Расчетная логика</h3>
+              <p><strong>Y<sub>r,s,t</sub> = L<sub>r,s,t</sub> x P<sub>r,s,t</sub></strong>. Выпуск региона и отрасли раскладывается на занятость и производительность труда.</p>
+            </article>
+            <article>
+              <h3>Остаточная миграционная потребность</h3>
+              <p><strong>M<sub>r,s,t</sub> = max(0, L<sup>req</sup><sub>r,s,t</sub> - S<sub>r,s,t</sub>)</strong>. Внутренний трудовой ресурс распределяется по отраслям, после чего остается дефицит.</p>
+            </article>
+            <article>
+              <h3>Почему noMIG</h3>
+              <p><strong>noMIG</strong> выбран базовым сценарием, потому что <strong>withMIG</strong> уже включает миграционный компонент.</p>
+            </article>
+            <article>
+              <h3>Границы интерпретации</h3>
+              <p>Оценка не является автоматической квотой. Для перехода к разрешениям нужна матрица <strong>ОКВЭД x профессия x квалификация</strong>.</p>
+            </article>
+            <article>
+              <h3>Горизонт до 2050</h3>
+              <p>Макроэкономический ориентир роста взят из OECD Economic Outlook 117 Long-Term Model, сценарий BAU1; техническое продление IMF 3,2% после 2027 года не используется.</p>
+            </article>
+          </div>
+          <p class="source-note" id="source-note"></p>
+        </section>
+      </section>
+
+      <aside class="insights-rail" aria-label="Отраслевой паспорт региона">
+        <section class="insights-card region-passport-panel">
+          <div class="rail-title">
+            <h2>Отраслевой паспорт региона</h2>
+          </div>
+          <div id="region-passport" class="region-passport"></div>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="app-footer">
+      <span>GitHub Pages: статические HTML, CSS, JavaScript, CSV, JSON и GeoJSON.</span>
+      <span>Данные обновлены: 26.05.2026</span>
+    </footer>
+  </div>
+</body>
+</html>

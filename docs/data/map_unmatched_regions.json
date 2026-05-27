@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "geojson_path": "data/russia_regions.geojson",
+  "geo_feature_count": 89,
+  "dashboard_region_count": 85,
+  "matched_regions": 85,
+  "unmatched_dashboard_regions": [],
+  "unmatched_geo_features": [
+    "Донецкая Народная Республика",
+    "Запорожская область",
+    "Луганская Народная Республика",
+    "Херсонская область"
+  ],
+  "notes": [
+    "GeoJSON matched through Name_full with explicit aliases for federal cities and autonomous okrug naming variants.",
+    "Extra GeoJSON features may remain outside the 85-region model universe."
+  ]
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "activity_id": "OKVED_G",
+    "okved_section": "G",
+    "activity_name": "Торговля оптовая и розничная; ремонт автотранспортных средств и мотоциклов",
+    "employment_persons": 13481716.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_C",
+    "okved_section": "C",
+    "activity_name": "Обрабатывающие производства",
+    "employment_persons": 10571164.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_F",
+    "okved_section": "F",
+    "activity_name": "Строительство",
+    "employment_persons": 6815951.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_H",
+    "okved_section": "H",
+    "activity_name": "Транспортировка и хранение",
+    "employment_persons": 5917066.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_P",
+    "okved_section": "P",
+    "activity_name": "Образование",
+    "employment_persons": 5359209.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_Q",
+    "okved_section": "Q",
+    "activity_name": "Деятельность в области здравоохранения и социальных услуг",
+    "employment_persons": 4531084.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_A",
+    "okved_section": "A",
+    "activity_name": "Сельское, лесное хозяйство, охота, рыболовство и рыбоводство",
+    "employment_persons": 4272778.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_O",
+    "okved_section": "O",
+    "activity_name": "Государственное управление и обеспечение военной безопасности; социальное обеспечение",
+    "employment_persons": 3401593.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_M",
+    "okved_section": "M",
+    "activity_name": "Деятельность профессиональная, научная и техническая",
+    "employment_persons": 2977678.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_N",
+    "okved_section": "N",
+    "activity_name": "Деятельность административная и сопутствующие дополнительные услуги",
+    "employment_persons": 2296551.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_I",
+    "okved_section": "I",
+    "activity_name": "Деятельность гостиниц и предприятий общественного питания",
+    "employment_persons": 2105286.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_J",
+    "okved_section": "J",
+    "activity_name": "Деятельность в области информации и связи",
+    "employment_persons": 1890627.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_L",
+    "okved_section": "L",
+    "activity_name": "Деятельность по операциям с недвижимым имуществом",
+    "employment_persons": 1889155.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_S",
+    "okved_section": "S",
+    "activity_name": "Предоставление прочих видов услуг",
+    "employment_persons": 1781915.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_D",
+    "okved_section": "D",
+    "activity_name": "Обеспечение электрической энергией, газом и паром; кондиционирование воздуха",
+    "employment_persons": 1505496.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_K",
+    "okved_section": "K",
+    "activity_name": "Деятельность финансовая и страховая",
+    "employment_persons": 1276325.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_B",
+    "okved_section": "B",
+    "activity_name": "Добыча полезных ископаемых",
+    "employment_persons": 1234087.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_R",
+    "okved_section": "R",
+    "activity_name": "Деятельность в области культуры, спорта, организации досуга и развлечений",
+    "employment_persons": 1209691.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_E",
+    "okved_section": "E",
+    "activity_name": "Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений",
+    "employment_persons": 685036.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  },
+  {
+    "activity_id": "OKVED_T",
+    "okved_section": "T",
+    "activity_name": "Деятельность домашних хозяйств как работодателей; недифференцированная деятельность частных домашних хозяйств по производству товаров и оказанию услуг для собственного потребления",
+    "employment_persons": 64258.0,
+    "vrp_constant_2016_mln_rub": 0.0,
+    "labour_productivity_constant_2016_thousand_rub_per_person": 0.0
+  }
+]

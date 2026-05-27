@@ -1,0 +1,20 @@
+{
+  "source_file": "data\\raw_emiss\\Уровень безработицы по методологии МОТ 15plus.xlsx",
+  "source_sha256": "bb923bc8c750019c0033bab402f663ce3962144d30b2c3d0495e66bc607bb2ad",
+  "rows_source_territories": 96,
+  "rows_long": 864,
+  "years": [
+    2017,
+    2025
+  ],
+  "matched_rows": 864,
+  "unmatched_rows": 0,
+  "matched_territories": 96,
+  "model_nonoverlap_territories_with_latest_rate": 85,
+  "latest_year": 2025,
+  "mean_latest_model_rate_pct": 2.6717647058823526,
+  "min_latest_model_rate_pct": 0.8,
+  "max_latest_model_rate_pct": 25.4,
+  "long_csv": "data\\processed\\unemployment_rate_ilo_15plus_2017_2025_long.csv",
+  "matched_csv": "data\\processed\\unemployment_rate_ilo_15plus_2017_2025_matched.csv"
+}

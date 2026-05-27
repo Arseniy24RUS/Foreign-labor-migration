@@ -1,0 +1,682 @@
+[
+  {
+    "territory_id": "TER078",
+    "territory_name": "Алтайский край",
+    "geo_name": "Алтайский край",
+    "geo_key": "Алтайский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER092",
+    "territory_name": "Амурская область",
+    "geo_name": "Амурская область",
+    "geo_key": "Амурская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER026",
+    "territory_name": "Архангельская область (кроме Ненецкого автономного округа)",
+    "geo_name": "Архангельская область",
+    "geo_key": "Архангельская область",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER039",
+    "territory_name": "Астраханская область",
+    "geo_name": "Астраханская область",
+    "geo_key": "Астраханская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER003",
+    "territory_name": "Белгородская область",
+    "geo_name": "Белгородская область",
+    "geo_key": "Белгородская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER004",
+    "territory_name": "Брянская область",
+    "geo_name": "Брянская область",
+    "geo_key": "Брянская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER005",
+    "territory_name": "Владимирская область",
+    "geo_name": "Владимирская область",
+    "geo_key": "Владимирская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER040",
+    "territory_name": "Волгоградская область",
+    "geo_name": "Волгоградская область",
+    "geo_key": "Волгоградская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER027",
+    "territory_name": "Вологодская область",
+    "geo_name": "Вологодская область",
+    "geo_key": "Вологодская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER006",
+    "territory_name": "Воронежская область",
+    "geo_name": "Воронежская область",
+    "geo_key": "Воронежская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER020",
+    "territory_name": "Город Москва столица Российской Федерации город федерального значения",
+    "geo_name": "Город Москва",
+    "geo_key": "Город Москва",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER033",
+    "territory_name": "Город Санкт-Петербург город федерального значения",
+    "geo_name": "Город Санкт-Петербург",
+    "geo_key": "Город Санкт-Петербург",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER042",
+    "territory_name": "Город федерального значения Севастополь",
+    "geo_name": "Город Севастополь",
+    "geo_key": "Город Севастополь",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER095",
+    "territory_name": "Еврейская автономная область",
+    "geo_name": "Еврейская автономная область",
+    "geo_key": "Еврейская автономная область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER087",
+    "territory_name": "Забайкальский край",
+    "geo_name": "Забайкальский край",
+    "geo_key": "Забайкальский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER007",
+    "territory_name": "Ивановская область",
+    "geo_name": "Ивановская область",
+    "geo_key": "Ивановская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER080",
+    "territory_name": "Иркутская область",
+    "geo_name": "Иркутская область",
+    "geo_key": "Иркутская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER046",
+    "territory_name": "Кабардино-Балкарская Республика",
+    "geo_name": "Кабардино-Балкарская Республика",
+    "geo_key": "Кабардино-Балкарская Республика",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER028",
+    "territory_name": "Калининградская область",
+    "geo_name": "Калининградская область",
+    "geo_key": "Калининградская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER008",
+    "territory_name": "Калужская область",
+    "geo_name": "Калужская область",
+    "geo_key": "Калужская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER089",
+    "territory_name": "Камчатский край",
+    "geo_name": "Камчатский край",
+    "geo_key": "Камчатский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER047",
+    "territory_name": "Карачаево-Черкесская Республика",
+    "geo_name": "Карачаево-Черкесская Республика",
+    "geo_key": "Карачаево-Черкесская Республика",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER081",
+    "territory_name": "Кемеровская область - Кузбасс",
+    "geo_name": "Кемеровская область – Кузбасс",
+    "geo_key": "Кемеровская область – Кузбасс",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER059",
+    "territory_name": "Кировская область",
+    "geo_name": "Кировская область",
+    "geo_key": "Кировская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER009",
+    "territory_name": "Костромская область",
+    "geo_name": "Костромская область",
+    "geo_key": "Костромская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER038",
+    "territory_name": "Краснодарский край",
+    "geo_name": "Краснодарский край",
+    "geo_key": "Краснодарский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER079",
+    "territory_name": "Красноярский край",
+    "geo_name": "Красноярский край",
+    "geo_key": "Красноярский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER067",
+    "territory_name": "Курганская область",
+    "geo_name": "Курганская область",
+    "geo_key": "Курганская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER010",
+    "territory_name": "Курская область",
+    "geo_name": "Курская область",
+    "geo_key": "Курская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER029",
+    "territory_name": "Ленинградская область",
+    "geo_name": "Ленинградская область",
+    "geo_key": "Ленинградская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER011",
+    "territory_name": "Липецкая область",
+    "geo_name": "Липецкая область",
+    "geo_key": "Липецкая область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER093",
+    "territory_name": "Магаданская область",
+    "geo_name": "Магаданская область",
+    "geo_key": "Магаданская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER012",
+    "territory_name": "Московская область",
+    "geo_name": "Московская область",
+    "geo_key": "Московская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER030",
+    "territory_name": "Мурманская область",
+    "geo_name": "Мурманская область",
+    "geo_key": "Мурманская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER025",
+    "territory_name": "Ненецкий автономный округ (Архангельская область)",
+    "geo_name": "Ненецкий автономный округ",
+    "geo_key": "Ненецкий автономный округ",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER060",
+    "territory_name": "Нижегородская область",
+    "geo_name": "Нижегородская область",
+    "geo_key": "Нижегородская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER031",
+    "territory_name": "Новгородская область",
+    "geo_name": "Новгородская область",
+    "geo_key": "Новгородская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER082",
+    "territory_name": "Новосибирская область",
+    "geo_name": "Новосибирская область",
+    "geo_key": "Новосибирская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER083",
+    "territory_name": "Омская область",
+    "geo_name": "Омская область",
+    "geo_key": "Омская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER061",
+    "territory_name": "Оренбургская область",
+    "geo_name": "Оренбургская область",
+    "geo_key": "Оренбургская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER013",
+    "territory_name": "Орловская область",
+    "geo_name": "Орловская область",
+    "geo_key": "Орловская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER062",
+    "territory_name": "Пензенская область",
+    "geo_name": "Пензенская область",
+    "geo_key": "Пензенская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER058",
+    "territory_name": "Пермский край",
+    "geo_name": "Пермский край",
+    "geo_key": "Пермский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER090",
+    "territory_name": "Приморский край",
+    "geo_name": "Приморский край",
+    "geo_key": "Приморский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER032",
+    "territory_name": "Псковская область",
+    "geo_name": "Псковская область",
+    "geo_key": "Псковская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER035",
+    "territory_name": "Республика Адыгея (Адыгея)",
+    "geo_name": "Республика Адыгея (Адыгея)",
+    "geo_key": "Республика Адыгея (Адыгея)",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER075",
+    "territory_name": "Республика Алтай",
+    "geo_name": "Республика Алтай",
+    "geo_key": "Республика Алтай",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER052",
+    "territory_name": "Республика Башкортостан",
+    "geo_name": "Республика Башкортостан",
+    "geo_key": "Республика Башкортостан",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER086",
+    "territory_name": "Республика Бурятия",
+    "geo_name": "Республика Бурятия",
+    "geo_key": "Республика Бурятия",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER044",
+    "territory_name": "Республика Дагестан",
+    "geo_name": "Республика Дагестан",
+    "geo_key": "Республика Дагестан",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER045",
+    "territory_name": "Республика Ингушетия",
+    "geo_name": "Республика Ингушетия",
+    "geo_key": "Республика Ингушетия",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER036",
+    "territory_name": "Республика Калмыкия",
+    "geo_name": "Республика Калмыкия",
+    "geo_key": "Республика Калмыкия",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER022",
+    "territory_name": "Республика Карелия",
+    "geo_name": "Республика Карелия",
+    "geo_key": "Республика Карелия",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER023",
+    "territory_name": "Республика Коми",
+    "geo_name": "Республика Коми",
+    "geo_key": "Республика Коми",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER037",
+    "territory_name": "Республика Крым",
+    "geo_name": "Республика Крым",
+    "geo_key": "Республика Крым",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER053",
+    "territory_name": "Республика Марий Эл",
+    "geo_name": "Республика Марий Эл",
+    "geo_key": "Республика Марий Эл",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER054",
+    "territory_name": "Республика Мордовия",
+    "geo_name": "Республика Мордовия",
+    "geo_key": "Республика Мордовия",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER088",
+    "territory_name": "Республика Саха (Якутия)",
+    "geo_name": "Республика Саха (Якутия)",
+    "geo_key": "Республика Саха (Якутия)",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER048",
+    "territory_name": "Республика Северная Осетия-Алания",
+    "geo_name": "Республика Северная Осетия – Алания",
+    "geo_key": "Республика Северная Осетия – Алания",
+    "match_method": "alias",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER055",
+    "territory_name": "Республика Татарстан (Татарстан)",
+    "geo_name": "Республика Татарстан (Татарстан)",
+    "geo_key": "Республика Татарстан (Татарстан)",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER076",
+    "territory_name": "Республика Тыва",
+    "geo_name": "Республика Тыва",
+    "geo_key": "Республика Тыва",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER077",
+    "territory_name": "Республика Хакасия",
+    "geo_name": "Республика Хакасия",
+    "geo_key": "Республика Хакасия",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER041",
+    "territory_name": "Ростовская область",
+    "geo_name": "Ростовская область",
+    "geo_key": "Ростовская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER014",
+    "territory_name": "Рязанская область",
+    "geo_name": "Рязанская область",
+    "geo_key": "Рязанская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER063",
+    "territory_name": "Самарская область",
+    "geo_name": "Самарская область",
+    "geo_key": "Самарская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER064",
+    "territory_name": "Саратовская область",
+    "geo_name": "Саратовская область",
+    "geo_key": "Саратовская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER094",
+    "territory_name": "Сахалинская область",
+    "geo_name": "Сахалинская область",
+    "geo_key": "Сахалинская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER068",
+    "territory_name": "Свердловская область",
+    "geo_name": "Свердловская область",
+    "geo_key": "Свердловская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER015",
+    "territory_name": "Смоленская область",
+    "geo_name": "Смоленская область",
+    "geo_key": "Смоленская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER050",
+    "territory_name": "Ставропольский край",
+    "geo_name": "Ставропольский край",
+    "geo_key": "Ставропольский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER016",
+    "territory_name": "Тамбовская область",
+    "geo_name": "Тамбовская область",
+    "geo_key": "Тамбовская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER017",
+    "territory_name": "Тверская область",
+    "geo_name": "Тверская область",
+    "geo_key": "Тверская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER084",
+    "territory_name": "Томская область",
+    "geo_name": "Томская область",
+    "geo_key": "Томская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER018",
+    "territory_name": "Тульская область",
+    "geo_name": "Тульская область",
+    "geo_key": "Тульская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER072",
+    "territory_name": "Тюменская область (кроме Ханты-Мансийского автономного округа-Югры и Ямало-Ненецкого автономного округа)",
+    "geo_name": "Тюменская область",
+    "geo_key": "Тюменская область",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER056",
+    "territory_name": "Удмуртская Республика",
+    "geo_name": "Удмуртская Республика",
+    "geo_key": "Удмуртская Республика",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER065",
+    "territory_name": "Ульяновская область",
+    "geo_name": "Ульяновская область",
+    "geo_key": "Ульяновская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER091",
+    "territory_name": "Хабаровский край",
+    "geo_name": "Хабаровский край",
+    "geo_key": "Хабаровский край",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER070",
+    "territory_name": "Ханты-Мансийский автономный округ - Югра (Тюменская область)",
+    "geo_name": "Ханты-Мансийский автономный округ – Югра",
+    "geo_key": "Ханты-Мансийский автономный округ – Югра",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER073",
+    "territory_name": "Челябинская область",
+    "geo_name": "Челябинская область",
+    "geo_key": "Челябинская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER049",
+    "territory_name": "Чеченская Республика",
+    "geo_name": "Чеченская Республика",
+    "geo_key": "Чеченская Республика",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER057",
+    "territory_name": "Чувашская Республика - Чувашия",
+    "geo_name": "Чувашская Республика - Чувашия",
+    "geo_key": "Чувашская Республика - Чувашия",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER096",
+    "territory_name": "Чукотский автономный округ",
+    "geo_name": "Чукотский автономный округ",
+    "geo_key": "Чукотский автономный округ",
+    "match_method": "normalized_name",
+    "notes": ""
+  },
+  {
+    "territory_id": "TER071",
+    "territory_name": "Ямало-Ненецкий автономный округ (Тюменская область)",
+    "geo_name": "Ямало-Ненецкий автономный округ",
+    "geo_key": "Ямало-Ненецкий автономный округ",
+    "match_method": "alias",
+    "notes": "parent/autonomous okrug alias; verify non-overlap interpretation"
+  },
+  {
+    "territory_id": "TER019",
+    "territory_name": "Ярославская область",
+    "geo_name": "Ярославская область",
+    "geo_key": "Ярославская область",
+    "match_method": "normalized_name",
+    "notes": ""
+  }
+]
