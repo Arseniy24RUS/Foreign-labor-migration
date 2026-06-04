@@ -134,6 +134,25 @@ a:focus-visible {
   gap: 22px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.language-toggle {
+  flex: 0 0 auto;
+  min-width: 42px;
+  min-height: 34px;
+  padding: 0 10px;
+  border-color: var(--line-strong);
+  background: #f8fbff;
+  color: var(--blue);
+  font-size: 12px;
+  line-height: 1;
+}
+
 .org-logos a {
   display: grid;
   place-items: center;
@@ -1166,6 +1185,10 @@ tbody tr:hover {
     justify-content: flex-start;
   }
 
+  .header-actions {
+    justify-content: flex-start;
+  }
+
   .dashboard-layout,
   .overview-grid,
   .ranking-grid,
@@ -1218,6 +1241,15 @@ tbody tr:hover {
     justify-content: center;
     gap: 16px;
     padding: 2px 0 4px;
+  }
+
+  .header-actions {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .language-toggle {
+    min-width: 40px;
   }
 
   .module-nav a {

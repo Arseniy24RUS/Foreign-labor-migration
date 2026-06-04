@@ -1,0 +1,13 @@
+{
+  "name": "foreign-labor-migration-i18n-qa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve:docs": "http-server docs -a 127.0.0.1 -p 4181 -c-1",
+    "test:i18n": "playwright test tests/i18n.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "http-server": "^14.1.1"
+  }
+}

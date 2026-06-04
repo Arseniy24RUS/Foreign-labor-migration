@@ -1,0 +1,393 @@
+{
+  "app": {
+    "title": "Labor Resource Demand by Industry and Region in Russia",
+    "subtitle": "Research presentation dashboard: recommended annual quota, year-end deficit, and economic labor demand.",
+    "organizations": "Organizations",
+    "mgimoOfficial": "MGIMO official website",
+    "fniscOfficial": "FNISC official website"
+  },
+  "language": {
+    "toggleLabel": "Switch to Russian",
+    "toggleTitle": "Switch language"
+  },
+  "nav": {
+    "sections": "Dashboard sections",
+    "overview": "Overview",
+    "map": "Map",
+    "rankings": "Rankings",
+    "atlas": "Atlas",
+    "table": "Table",
+    "methodology": "Methodology"
+  },
+  "common": {
+    "noData": "n/a"
+  },
+  "filters": {
+    "title": "Filters",
+    "reset": "Reset",
+    "all": "All",
+    "district": "Federal district",
+    "region": "Region",
+    "industry": "OKVED industry",
+    "allDistricts": "All districts",
+    "allRegions": "All regions",
+    "allSectors": "All industries",
+    "selectedRegionCount": "{count} regions",
+    "regionChooser": "Region selection",
+    "yearChooser": "Calculation year selection"
+  },
+  "header": {
+    "metricCaption": "Map and atlas metric: {metric}, persons",
+    "sourceGrowth": "Macroeconomic benchmark: {source}.",
+    "sourceScenario": "Scenario: {scenario}.",
+    "generatedAt": "Calculation generated: {date}.",
+    "staticResources": "All dashboard files load as static resources from the docs/ folder."
+  },
+  "scenario": {
+    "base": "baseline",
+    "detailFallback": "age / allocation"
+  },
+  "timeline": {
+    "heading": "Calculation horizon",
+    "caption": "The selected year controls KPIs, the map, rankings, matrix, and table."
+  },
+  "kpi": {
+    "aria": "Key indicators",
+    "annualQuota": "Recommended annual quota",
+    "persons": "persons",
+    "stockNeed": "Year-end deficit",
+    "stockNeedNote": "in the selected year, persons",
+    "reserve": "Unemployed reserve",
+    "reserveNote": "contribution in the selected year",
+    "cumulativeQuota": "Cumulative quota since 2025",
+    "cumulativeQuotaNote": "latest value in the selected horizon",
+    "productivity": "Productivity forecast",
+    "productivityNote": "weighted average growth rate",
+    "positiveCells": "Region-industry directions where quota is needed",
+    "positiveCellsNote": "share of region × industry"
+  },
+  "activity": {
+    "heading": "Activities",
+    "subtitle": "All OKVED sections"
+  },
+  "fact": {
+    "heading": "Factual base 2017-2024",
+    "caption": "Historical values used to build the calculation base.",
+    "captionDynamic": "Factual series {firstYear}-{baseYear}; values are filtered by district, region, and OKVED.",
+    "noHistory": "Factual history was not found in static data.",
+    "employment2024": "Employment 2024",
+    "employmentDelta": "Employment change",
+    "productivity": "Labor productivity",
+    "productivityNote": "latest available fact, thousand 2016 rubles per person",
+    "coverage": "Employment coverage",
+    "coverageNote": "model cells in 2024",
+    "deltaNote": "2017-2024, persons"
+  },
+  "economic": {
+    "heading": "Why economic growth requires labor resources",
+    "description": "GRP = employment × labor productivity. If target output growth is higher than forecast productivity growth, the model needs an additional labor resource.",
+    "formulaAria": "Calculation formulas",
+    "formula1": "GRP = employment × productivity",
+    "formula2": "Δln GRP ≈ Δln employment + Δln productivity",
+    "formula3": "required employment growth ≈ target GRP growth − productivity growth"
+  },
+  "map": {
+    "heading": "Choropleth map of Russian regions",
+    "loading": "Loading geolayer...",
+    "geoMissing": "GeoJSON not found; the map will be added after the geolayer is connected.",
+    "allMatched": "Geolayer connected; all 85 model regions are matched.",
+    "needsReview": "Geolayer connected; some matches require review.",
+    "zoomDistrict": "Map zoomed to federal district: {district}.",
+    "zoomRegions": "Map zoomed to selected regions: {count}.",
+    "svgAria": "Choropleth map of the federal subjects of the Russian Federation",
+    "noPositiveSectors": "no positive industries",
+    "noModelData": "no model data",
+    "noData": "no data",
+    "topOkved": "Top 3 OKVED",
+    "tableFallback": "Table fallback for the map"
+  },
+  "trend": {
+    "heading": "Recommended quota and deficit by year",
+    "description": "Annual recommended quota, cumulative quota since 2025, and year-end deficit with markers for 2030, 2036, and 2050."
+  },
+  "resource": {
+    "heading": "Labor resource balance",
+    "description": "Total labor resources required, full mobilization reserve of the unemployed, and external migrants."
+  },
+  "productivity": {
+    "heading": "Labor productivity",
+    "description": "Weighted forecast of labor productivity growth for selected regions and industries."
+  },
+  "shares": {
+    "heading": "Industry employment structure",
+    "description": "Industry shares in 2024 employment and in the forecast structure of the domestic labor resource."
+  },
+  "rankings": {
+    "regionsHeading": "Region ranking",
+    "regionsDescription": "Top federal subjects for the selected year.",
+    "sectorsHeading": "Industry ranking",
+    "sectorsDescription": "OKVED sections for the selected year."
+  },
+  "atlas": {
+    "heading": "Atlas of regional-industry demand",
+    "description": "Flows federal district → region → industry and the top 100 cells for the selected year.",
+    "metricAria": "Atlas metric",
+    "annualQuotaShort": "Annual quota",
+    "stockShort": "Deficit",
+    "cumulativeShort": "Cumulative",
+    "otherRegions": "Other regions",
+    "otherSectors": "Other industries",
+    "unknownDistrict": "Federal district not specified"
+  },
+  "table": {
+    "heading": "Details",
+    "modeAria": "Table mode",
+    "forecast": "Forecast",
+    "factual": "Fact",
+    "downloadCsv": "Download CSV",
+    "search": "Search",
+    "searchPlaceholder": "Region, district, industry, or OKVED",
+    "region": "Region",
+    "district": "District",
+    "okved": "OKVED",
+    "industry": "Industry",
+    "requiredEmployment": "Required employment",
+    "unemployedReserve": "Unemployed reserve",
+    "domesticResourceWithReserve": "Domestic resource with reserve",
+    "employment2024": "Employment 2024",
+    "productivityForecast": "Productivity forecast",
+    "sectorShare2024": "Industry share 2024",
+    "forecastShare": "Forecast share",
+    "employment": "Employment",
+    "vrp2016": "GRP 2016",
+    "productivity": "Productivity",
+    "countSuffix": "; first {visible} shown, CSV contains all filtered and sorted rows",
+    "countForecast": "{rows} rows of {total} for {year}",
+    "countFactual": "{rows} rows of {total} for 2017-2024"
+  },
+  "method": {
+    "heading": "Methodology and limitations",
+    "logicHeading": "Calculation logic",
+    "logicText": "<strong>Y<sub>r,s,t</sub> = L<sub>r,s,t</sub> x P<sub>r,s,t</sub></strong>. Regional and industry output is decomposed into employment and labor productivity.",
+    "migrationHeading": "Residual migration need",
+    "migrationText": "<strong>M<sub>r,s,t</sub> = max(0, L<sup>req</sup><sub>r,s,t</sub> - S<sub>r,s,t</sub>)</strong>. The domestic labor resource is allocated across industries, after which the deficit remains.",
+    "noMigHeading": "Why noMIG",
+    "noMigText": "<strong>noMIG</strong> is selected as the baseline scenario because <strong>withMIG</strong> already includes the migration component.",
+    "limitsHeading": "Interpretation boundaries",
+    "limitsText": "The estimate is not an automatic quota. Moving to permits requires an <strong>OKVED x occupation x qualification</strong> matrix.",
+    "horizonHeading": "Horizon to 2050",
+    "horizonText": "The macroeconomic growth benchmark is taken from the OECD Economic Outlook 117 Long-Term Model, BAU1 scenario; the technical IMF 3.2% extension after 2027 is not used."
+  },
+  "passport": {
+    "aria": "Regional industry passport",
+    "heading": "Regional industry passport",
+    "districtHint": "The map is zoomed to a district. Select a federal subject on the map or in the filter to open the passport.",
+    "defaultHint": "Select a federal subject on the map or in the filter to open the passport.",
+    "emptyHint": "Select a region on the map or in the filter to open the industry passport.",
+    "deficit": "deficit",
+    "cumulative": "cumulative",
+    "productivity": "productivity",
+    "reserve": "reserve"
+  },
+  "footer": {
+    "static": "GitHub Pages: static HTML, CSS, JavaScript, CSV, JSON, and GeoJSON.",
+    "updated": "Data updated: 26.05.2026"
+  },
+  "metric": {
+    "recommendedAnnualQuota": "Recommended annual quota",
+    "stockNeed": "Year-end deficit",
+    "cumulativeQuota": "Cumulative quota since 2025",
+    "shortStock": "Deficit"
+  },
+  "chart": {
+    "common": {
+      "year": "Year",
+      "persons": "Persons",
+      "personsLower": "persons",
+      "okvedSection": "OKVED section",
+      "share": "Share"
+    },
+    "source": {
+      "fact": "fact",
+      "forecast": "forecast"
+    },
+    "economic": {
+      "cellsName": "Region × industry cells",
+      "cellsHover": "%{customdata}<br>Δln employment: %{x:.2%}<br>Δln GRP: %{y:.2%}<extra></extra>",
+      "lineName": "Linear relationship",
+      "lineHover": "Estimate: Δln GRP = a + b × Δln employment<extra></extra>",
+      "xEmploymentLog": "Δln employment",
+      "yVrpLog": "Δln real GRP",
+      "employmentContribution": "Employment contribution",
+      "employmentHover": "%{x}<br>Employment contribution: %{y:.2%}<extra></extra>",
+      "productivityContribution": "Productivity contribution",
+      "productivityHover": "%{x}<br>Productivity contribution: %{y:.2%}<extra></extra>",
+      "logGrowthRate": "Log growth rate"
+    },
+    "trend": {
+      "factEmployment": "Fact: employment",
+      "factEmploymentHover": "Year %{x}<br>Factual employment: %{y:,.0f} persons<extra></extra>",
+      "requiredEmployment": "Forecast: required employment",
+      "requiredEmploymentHover": "Year %{x}<br>Required employment: %{y:,.0f} persons<extra></extra>",
+      "residualNeed": "Residual need",
+      "residualNeedHover": "Year %{x}<br>Residual need: %{y:,.0f} persons<extra></extra>",
+      "base2024": "2024 base"
+    },
+    "quota": {
+      "annualHover": "Year %{x}<br>Recommended quota: %{y:,.0f} persons<extra></extra>",
+      "cumulativeHover": "Year %{x}<br>Cumulative quota since 2025: %{y:,.0f} persons<extra></extra>",
+      "stockHover": "Year %{x}<br>Year-end deficit: %{y:,.0f} persons<extra></extra>",
+      "annualAxis": "Recommended quota",
+      "secondaryAxis": "Deficit / cumulative quota"
+    },
+    "resource": {
+      "required": "Total labor resources required",
+      "requiredHover": "Year %{x}<br>Required employment: %{y:,.0f} persons<extra></extra>",
+      "reserve": "Mobilization reserve of the unemployed",
+      "reserveHover": "Year %{x}<br>Unemployed reserve: %{y:,.0f} persons<extra></extra>",
+      "migrants": "External migrants: year-end deficit",
+      "requiredAxis": "Total required",
+      "secondaryAxis": "Reserve / migrants"
+    },
+    "productivity": {
+      "yearly": "Annual productivity forecast",
+      "yearlyHover": "Year %{x}<br>Productivity growth: %{y:.2%}<extra></extra>",
+      "static": "Static productivity estimate",
+      "staticHover": "Year %{x}<br>Static estimate: %{y:.2%}<extra></extra>",
+      "target": "Target GRP growth",
+      "targetHover": "Year %{x}<br>Target GRP growth: %{y:.2%}<extra></extra>",
+      "growthRate": "Growth rate"
+    },
+    "shares": {
+      "base": "Employment share 2024",
+      "baseHover": "%{customdata}<br>Employment share 2024: %{y:.1%}<extra></extra>",
+      "forecast": "Forecast share of domestic resource",
+      "forecastHover": "%{customdata}<br>Forecast share: %{y:.1%}<extra></extra>"
+    },
+    "ranking": {
+      "hover": "%{customdata}<br>%{x:,.0f} persons<extra></extra>"
+    },
+    "heatmap": {
+      "hover": "%{customdata[0]}<br>%{customdata[1]}<br>%{z:,.0f} persons<extra></extra>"
+    },
+    "atlas": {
+      "sankeyHover": "%{source.label} → %{target.label}<br>%{value:,.0f} persons<extra></extra>",
+      "bubbleHoverTail": "Year-end deficit: %{customdata[3]:,.0f}<br>Cumulative quota: %{customdata[4]:,.0f}<extra></extra>"
+    }
+  },
+  "sectorMeta": {
+    "A": "Agro",
+    "B": "Mining",
+    "C": "Manufacturing",
+    "D": "Energy",
+    "E": "Water",
+    "F": "Construction",
+    "G": "Trade",
+    "H": "Transport",
+    "I": "Hospitality",
+    "J": "Communications",
+    "K": "Finance",
+    "L": "Real estate",
+    "M": "Science",
+    "N": "Admin",
+    "O": "Government",
+    "P": "Education",
+    "Q": "Health",
+    "R": "Culture",
+    "S": "Services",
+    "T": "Households"
+  },
+  "district.Дальневосточный федеральный округ (с 03.11.2018)": "Far Eastern Federal District (since 03.11.2018)",
+  "district.Приволжский федеральный округ": "Volga Federal District",
+  "district.Северо-Западный федеральный округ": "Northwestern Federal District",
+  "district.Северо-Кавказский федеральный округ": "North Caucasian Federal District",
+  "district.Сибирский федеральный округ (с 03.11.2018)": "Siberian Federal District (since 03.11.2018)",
+  "district.Уральский федеральный округ": "Ural Federal District",
+  "district.Центральный федеральный округ": "Central Federal District",
+  "district.Южный федеральный округ (с 29.07.2016)": "Southern Federal District (since 29.07.2016)",
+  "region.Алтайский край": "Altai Krai",
+  "region.Амурская область": "Amur Oblast",
+  "region.Архангельская область (кроме Ненецкого автономного округа)": "Arkhangelsk Oblast (excluding Nenets Autonomous Okrug)",
+  "region.Астраханская область": "Astrakhan Oblast",
+  "region.Белгородская область": "Belgorod Oblast",
+  "region.Брянская область": "Bryansk Oblast",
+  "region.Владимирская область": "Vladimir Oblast",
+  "region.Волгоградская область": "Volgograd Oblast",
+  "region.Вологодская область": "Vologda Oblast",
+  "region.Воронежская область": "Voronezh Oblast",
+  "region.Город Москва столица Российской Федерации город федерального значения": "Moscow, federal city and capital of the Russian Federation",
+  "region.Город Санкт-Петербург город федерального значения": "Saint Petersburg, federal city",
+  "region.Город федерального значения Севастополь": "Sevastopol, federal city",
+  "region.Еврейская автономная область": "Jewish Autonomous Oblast",
+  "region.Забайкальский край": "Zabaykalsky Krai",
+  "region.Ивановская область": "Ivanovo Oblast",
+  "region.Иркутская область": "Irkutsk Oblast",
+  "region.Кабардино-Балкарская Республика": "Kabardino-Balkarian Republic",
+  "region.Калининградская область": "Kaliningrad Oblast",
+  "region.Калужская область": "Kaluga Oblast",
+  "region.Камчатский край": "Kamchatka Krai",
+  "region.Карачаево-Черкесская Республика": "Karachay-Cherkess Republic",
+  "region.Кемеровская область - Кузбасс": "Kemerovo Oblast - Kuzbass",
+  "region.Кировская область": "Kirov Oblast",
+  "region.Костромская область": "Kostroma Oblast",
+  "region.Краснодарский край": "Krasnodar Krai",
+  "region.Красноярский край": "Krasnoyarsk Krai",
+  "region.Курганская область": "Kurgan Oblast",
+  "region.Курская область": "Kursk Oblast",
+  "region.Ленинградская область": "Leningrad Oblast",
+  "region.Липецкая область": "Lipetsk Oblast",
+  "region.Магаданская область": "Magadan Oblast",
+  "region.Московская область": "Moscow Oblast",
+  "region.Мурманская область": "Murmansk Oblast",
+  "region.Ненецкий автономный округ (Архангельская область)": "Nenets Autonomous Okrug (Arkhangelsk Oblast)",
+  "region.Нижегородская область": "Nizhny Novgorod Oblast",
+  "region.Новгородская область": "Novgorod Oblast",
+  "region.Новосибирская область": "Novosibirsk Oblast",
+  "region.Омская область": "Omsk Oblast",
+  "region.Оренбургская область": "Orenburg Oblast",
+  "region.Орловская область": "Oryol Oblast",
+  "region.Пензенская область": "Penza Oblast",
+  "region.Пермский край": "Perm Krai",
+  "region.Приморский край": "Primorsky Krai",
+  "region.Псковская область": "Pskov Oblast",
+  "region.Республика Адыгея (Адыгея)": "Republic of Adygea (Adygea)",
+  "region.Республика Алтай": "Republic of Altai",
+  "region.Республика Башкортостан": "Republic of Bashkortostan",
+  "region.Республика Бурятия": "Republic of Buryatia",
+  "region.Республика Дагестан": "Republic of Dagestan",
+  "region.Республика Ингушетия": "Republic of Ingushetia",
+  "region.Республика Калмыкия": "Republic of Kalmykia",
+  "region.Республика Карелия": "Republic of Karelia",
+  "region.Республика Коми": "Komi Republic",
+  "region.Республика Крым": "Republic of Crimea",
+  "region.Республика Марий Эл": "Mari El Republic",
+  "region.Республика Мордовия": "Republic of Mordovia",
+  "region.Республика Саха (Якутия)": "Sakha Republic (Yakutia)",
+  "region.Республика Северная Осетия-Алания": "Republic of North Ossetia-Alania",
+  "region.Республика Татарстан (Татарстан)": "Republic of Tatarstan (Tatarstan)",
+  "region.Республика Тыва": "Tuva Republic",
+  "region.Республика Хакасия": "Republic of Khakassia",
+  "region.Ростовская область": "Rostov Oblast",
+  "region.Рязанская область": "Ryazan Oblast",
+  "region.Самарская область": "Samara Oblast",
+  "region.Саратовская область": "Saratov Oblast",
+  "region.Сахалинская область": "Sakhalin Oblast",
+  "region.Свердловская область": "Sverdlovsk Oblast",
+  "region.Смоленская область": "Smolensk Oblast",
+  "region.Ставропольский край": "Stavropol Krai",
+  "region.Тамбовская область": "Tambov Oblast",
+  "region.Тверская область": "Tver Oblast",
+  "region.Томская область": "Tomsk Oblast",
+  "region.Тульская область": "Tula Oblast",
+  "region.Тюменская область (кроме Ханты-Мансийского автономного округа-Югры и Ямало-Ненецкого автономного округа)": "Tyumen Oblast (excluding Khanty-Mansi Autonomous Okrug-Yugra and Yamalo-Nenets Autonomous Okrug)",
+  "region.Удмуртская Республика": "Udmurt Republic",
+  "region.Ульяновская область": "Ulyanovsk Oblast",
+  "region.Хабаровский край": "Khabarovsk Krai",
+  "region.Ханты-Мансийский автономный округ - Югра (Тюменская область)": "Khanty-Mansi Autonomous Okrug - Yugra (Tyumen Oblast)",
+  "region.Челябинская область": "Chelyabinsk Oblast",
+  "region.Чеченская Республика": "Chechen Republic",
+  "region.Чувашская Республика - Чувашия": "Chuvash Republic - Chuvashia",
+  "region.Чукотский автономный округ": "Chukotka Autonomous Okrug",
+  "region.Ямало-Ненецкий автономный округ (Тюменская область)": "Yamalo-Nenets Autonomous Okrug (Tyumen Oblast)",
+  "region.Ярославская область": "Yaroslavl Oblast"
+}

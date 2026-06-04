@@ -55,26 +55,26 @@ const FACTUAL_NUMERIC_COLUMNS = [
 ];
 
 const SECTOR_META = {
-  A: { label: "Агро", icon: "leaf" },
-  B: { label: "Добыча", icon: "mine" },
-  C: { label: "Производство", icon: "factory" },
-  D: { label: "Энергия", icon: "bolt" },
-  E: { label: "Вода", icon: "drop" },
-  F: { label: "Стройка", icon: "crane" },
-  G: { label: "Торговля", icon: "store" },
-  H: { label: "Транспорт", icon: "truck" },
-  I: { label: "Гостиницы", icon: "utensils" },
-  J: { label: "Связь", icon: "network" },
-  K: { label: "Финансы", icon: "coin" },
-  L: { label: "Недвижимость", icon: "building" },
-  M: { label: "Наука", icon: "compass" },
-  N: { label: "Админ", icon: "clipboard" },
-  O: { label: "Госуправление", icon: "columns" },
-  P: { label: "Образование", icon: "book" },
-  Q: { label: "Здоровье", icon: "health" },
-  R: { label: "Культура", icon: "spark" },
-  S: { label: "Услуги", icon: "hand" },
-  T: { label: "Домохозяйства", icon: "home" }
+  A: { labelKey: "sectorMeta.A", fallback: "Агро", icon: "leaf" },
+  B: { labelKey: "sectorMeta.B", fallback: "Добыча", icon: "mine" },
+  C: { labelKey: "sectorMeta.C", fallback: "Производство", icon: "factory" },
+  D: { labelKey: "sectorMeta.D", fallback: "Энергия", icon: "bolt" },
+  E: { labelKey: "sectorMeta.E", fallback: "Вода", icon: "drop" },
+  F: { labelKey: "sectorMeta.F", fallback: "Стройка", icon: "crane" },
+  G: { labelKey: "sectorMeta.G", fallback: "Торговля", icon: "store" },
+  H: { labelKey: "sectorMeta.H", fallback: "Транспорт", icon: "truck" },
+  I: { labelKey: "sectorMeta.I", fallback: "Гостиницы", icon: "utensils" },
+  J: { labelKey: "sectorMeta.J", fallback: "Связь", icon: "network" },
+  K: { labelKey: "sectorMeta.K", fallback: "Финансы", icon: "coin" },
+  L: { labelKey: "sectorMeta.L", fallback: "Недвижимость", icon: "building" },
+  M: { labelKey: "sectorMeta.M", fallback: "Наука", icon: "compass" },
+  N: { labelKey: "sectorMeta.N", fallback: "Админ", icon: "clipboard" },
+  O: { labelKey: "sectorMeta.O", fallback: "Госуправление", icon: "columns" },
+  P: { labelKey: "sectorMeta.P", fallback: "Образование", icon: "book" },
+  Q: { labelKey: "sectorMeta.Q", fallback: "Здоровье", icon: "health" },
+  R: { labelKey: "sectorMeta.R", fallback: "Культура", icon: "spark" },
+  S: { labelKey: "sectorMeta.S", fallback: "Услуги", icon: "hand" },
+  T: { labelKey: "sectorMeta.T", fallback: "Домохозяйства", icon: "home" }
 };
 
 const state = {
@@ -93,43 +93,84 @@ const state = {
   tableMode: "forecast",
   tableRows: [],
   factualTableRows: [],
-  exportRows: []
+  exportRows: [],
+  districtValues: [],
+  regionFilterRows: [],
+  sectorRows: []
 };
 
-const fmt = new Intl.NumberFormat("ru-RU", { maximumFractionDigits: 0 });
-const fmtShort = new Intl.NumberFormat("ru-RU", {
-  notation: "compact",
-  compactDisplay: "short",
-  maximumFractionDigits: 1
-});
-const fmtDecimal = new Intl.NumberFormat("ru-RU", { maximumFractionDigits: 1 });
-const fmtPercent = new Intl.NumberFormat("ru-RU", {
-  style: "percent",
-  maximumFractionDigits: 1
-});
+let fmt;
+let fmtShort;
+let fmtDecimal;
+let fmtPercent;
 const CONTROL_YEARS = [2030, 2036, 2050];
-const METRIC_OPTIONS = {
-  recommended_annual_quota_persons: "Рекомендуемая годовая квота",
-  foreign_labor_stock_need_persons: "Дефицит на конец года",
-  cumulative_recommended_quota_persons: "Накопленная квота с 2025 г."
+const METRIC_OPTION_KEYS = {
+  recommended_annual_quota_persons: ["metric.recommendedAnnualQuota", "Рекомендуемая годовая квота"],
+  foreign_labor_stock_need_persons: ["metric.stockNeed", "Дефицит на конец года"],
+  cumulative_recommended_quota_persons: ["metric.cumulativeQuota", "Накопленная квота с 2025 г."]
 };
 
 function byId(id) {
   return document.getElementById(id);
 }
 
+function currentLanguage() {
+  return window.AppI18n?.getLanguage?.() || "ru";
+}
+
+function currentLocale() {
+  return currentLanguage() === "ru" ? "ru-RU" : "en-US";
+}
+
+function updateFormatters() {
+  const locale = currentLocale();
+  fmt = new Intl.NumberFormat(locale, { maximumFractionDigits: 0 });
+  fmtShort = new Intl.NumberFormat(locale, {
+    notation: "compact",
+    compactDisplay: "short",
+    maximumFractionDigits: 1
+  });
+  fmtDecimal = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
+  fmtPercent = new Intl.NumberFormat(locale, {
+    style: "percent",
+    maximumFractionDigits: 1
+  });
+}
+
+updateFormatters();
+
+function t(key, params = {}, fallback = "") {
+  return window.AppI18n?.t?.(key, params, fallback) || fallback || key;
+}
+
+function regionLabel(value) {
+  return t(`region.${value}`, {}, value);
+}
+
+function districtLabel(value) {
+  return t(`district.${value}`, {}, value);
+}
+
+function sectorShortLabel(meta) {
+  return t(meta.labelKey, {}, meta.fallback);
+}
+
+function sectorFullLabel(row) {
+  return `${row.okved_section || ""} — ${row.activity_name || ""}`;
+}
+
 async function fetchJson(path, optional = false) {
   const response = await fetch(path);
   if (!response.ok) {
     if (optional) return null;
-    throw new Error(`Не удалось загрузить ${path}`);
+    throw new Error(t("error.loadFailed", { path }, `Не удалось загрузить ${path}`));
   }
   return response.json();
 }
 
 async function fetchText(path) {
   const response = await fetch(path);
-  if (!response.ok) throw new Error(`Не удалось загрузить ${path}`);
+  if (!response.ok) throw new Error(t("error.loadFailed", { path }, `Не удалось загрузить ${path}`));
   return response.text();
 }
 
@@ -193,7 +234,7 @@ function prepareRows(rows) {
       const metric = state.meta.value_column || "foreign_labor_migration_need_persons";
       out.dashboard_value_persons = toNumber(out[metric]);
     }
-    out.sector_label = `${out.okved_section || ""} — ${out.activity_name || ""}`;
+    out.sector_label = sectorFullLabel(out);
     out.scenario_label = [
       out.population_scenario,
       out.working_age_definition,
@@ -210,20 +251,20 @@ function prepareFactualRows(rows) {
     FACTUAL_NUMERIC_COLUMNS.forEach((column) => {
       if (column in out) out[column] = toNumber(out[column]);
     });
-    out.sector_label = `${out.okved_section || ""} — ${out.activity_name || ""}`;
+    out.sector_label = sectorFullLabel(out);
     return out;
   });
 }
 
 function uniqueSorted(rows, key, numeric = false) {
   const values = [...new Set(rows.map((row) => row[key]).filter((value) => value !== "" && value != null))];
-  return values.sort((a, b) => numeric ? Number(a) - Number(b) : String(a).localeCompare(String(b), "ru"));
+  return values.sort((a, b) => numeric ? Number(a) - Number(b) : String(a).localeCompare(String(b), currentLocale()));
 }
 
 function fillSelect(id, values, options = {}) {
   const select = byId(id);
   const {
-    allLabel = "Все",
+    allLabel = t("filters.all", {}, "Все"),
     includeAll = true,
     value = null,
     formatter = (item) => item
@@ -241,7 +282,9 @@ function fillSelect(id, values, options = {}) {
     option.textContent = formatter(item);
     select.appendChild(option);
   });
-  select.value = value == null ? select.options[0]?.value || "" : String(value);
+  const desiredValue = value == null ? select.options[0]?.value || "" : String(value);
+  select.value = desiredValue;
+  if (select.value !== desiredValue) select.value = select.options[0]?.value || "";
   select.disabled = !includeAll && values.length <= 1;
 }
 
@@ -270,7 +313,7 @@ function weightedAverage(rows, valueKey, weightKey = "employment_2024_persons") 
 
 function formatPercentField(value) {
   const number = Number(value);
-  return Number.isFinite(number) ? fmtPercent.format(number) : "н/д";
+  return Number.isFinite(number) ? fmtPercent.format(number) : t("common.noData", {}, "н/д");
 }
 
 function metricValue(row, key = state.metricKey) {
@@ -285,7 +328,8 @@ function withSelectedMetric(rows) {
 }
 
 function metricLabel() {
-  return METRIC_OPTIONS[state.metricKey] || "Рекомендуемая годовая квота";
+  const [key, fallback] = METRIC_OPTION_KEYS[state.metricKey] || METRIC_OPTION_KEYS.recommended_annual_quota_persons;
+  return t(key, {}, fallback);
 }
 
 function groupBy(rows, keys, valueKey = "dashboard_value_persons") {
@@ -375,18 +419,48 @@ function controlYearAnnotations() {
 
 function ensurePlotly() {
   if (!window.Plotly) {
-    throw new Error("Plotly не загружен. Проверьте локальный файл assets/plotly-2.35.2.min.js.");
+    throw new Error(t(
+      "error.plotlyMissing",
+      {},
+      "Plotly не загружен. Проверьте локальный файл assets/plotly-2.35.2.min.js."
+    ));
   }
 }
 
 function updateHeader() {
   const meta = state.meta;
-  byId("metric-caption").textContent = `Показатель карты и атласа: ${metricLabel()}, человек`;
+  byId("metric-caption").textContent = t(
+    "header.metricCaption",
+    { metric: metricLabel() },
+    `Показатель карты и атласа: ${metricLabel()}, человек`
+  );
   const sourceText = [];
-  if (meta.world_growth_source) sourceText.push(`Макроэкономический ориентир: ${meta.world_growth_source}.`);
-  if (meta.world_growth_scenario) sourceText.push(`Сценарий: ${meta.world_growth_scenario}.`);
-  if (meta.generated_at_utc) sourceText.push(`Расчет сформирован: ${new Date(meta.generated_at_utc).toLocaleString("ru-RU")}.`);
-  sourceText.push("Все файлы дашборда загружаются как статические ресурсы из папки docs/.");
+  if (meta.world_growth_source) {
+    sourceText.push(t(
+      "header.sourceGrowth",
+      { source: meta.world_growth_source },
+      `Макроэкономический ориентир: ${meta.world_growth_source}.`
+    ));
+  }
+  if (meta.world_growth_scenario) {
+    sourceText.push(t(
+      "header.sourceScenario",
+      { scenario: meta.world_growth_scenario },
+      `Сценарий: ${meta.world_growth_scenario}.`
+    ));
+  }
+  if (meta.generated_at_utc) {
+    sourceText.push(t(
+      "header.generatedAt",
+      { date: new Date(meta.generated_at_utc).toLocaleString(currentLocale()) },
+      `Расчет сформирован: ${new Date(meta.generated_at_utc).toLocaleString("ru-RU")}.`
+    ));
+  }
+  sourceText.push(t(
+    "header.staticResources",
+    {},
+    "Все файлы дашборда загружаются как статические ресурсы из папки docs/."
+  ));
   byId("source-note").textContent = sourceText.join(" ");
 }
 
@@ -471,22 +545,37 @@ function updateRegionSummary() {
   const summary = byId("filter-region-summary");
   if (!summary) return;
   if (!selected.length) {
-    summary.textContent = "Все регионы";
+    summary.textContent = t("filters.allRegions", {}, "Все регионы");
     return;
   }
   const names = selected.map((id) => state.regionNameById?.get(id) || id);
-  summary.textContent = names.length <= 2 ? names.join(", ") : `${names.length} регионов`;
+  summary.textContent = names.length <= 2
+    ? names.join(", ")
+    : t("filters.selectedRegionCount", { count: names.length }, `${names.length} регионов`);
+}
+
+function refreshRegionFilterLabels() {
+  state.regionNameById = new Map(
+    (state.regionFilterRows || []).map((row) => [row.territory_id, regionLabel(row.territory_name)])
+  );
+  const container = byId("filter-region-options");
+  container?.querySelectorAll(".region-option input").forEach((input) => {
+    const label = input.closest(".region-option")?.querySelector("span");
+    if (label) label.textContent = state.regionNameById.get(input.value) || input.value;
+  });
+  updateRegionSummary();
 }
 
 function renderRegionFilter(regions) {
-  state.regionNameById = new Map(regions.map((row) => [row.territory_id, row.territory_name]));
+  state.regionFilterRows = regions;
+  state.regionNameById = new Map(regions.map((row) => [row.territory_id, regionLabel(row.territory_name)]));
   const container = byId("filter-region-options");
   if (!container) return;
   container.innerHTML = regions.map((row) => {
     const id = `region-${row.territory_id}`;
     return `<label class="region-option" for="${escapeHtml(id)}">
       <input id="${escapeHtml(id)}" type="checkbox" value="${escapeHtml(row.territory_id)}" />
-      <span>${escapeHtml(row.territory_name)}</span>
+      <span>${escapeHtml(regionLabel(row.territory_name))}</span>
     </label>`;
   }).join("");
   container.addEventListener("change", () => {
@@ -503,23 +592,38 @@ function renderRegionFilter(regions) {
   updateRegionSummary();
 }
 
+function refreshFilterSelects() {
+  const districtValue = byId("filter-district")?.value || state.filters.district || "__all__";
+  fillSelect("filter-district", state.districtValues || [], {
+    allLabel: t("filters.allDistricts", {}, "Все округа"),
+    value: districtValue,
+    formatter: districtLabel
+  });
+
+  const sectorValue = byId("filter-sector")?.value || state.filters.sector || "__all__";
+  fillSelect("filter-sector", (state.sectorRows || []).map((row) => row.activity_id), {
+    allLabel: t("filters.allSectors", {}, "Все отрасли"),
+    value: sectorValue,
+    formatter: (id) => {
+      const row = (state.sectorRows || []).find((item) => item.activity_id === id);
+      return row ? sectorFullLabel(row) : id;
+    }
+  });
+
+  refreshRegionFilterLabels();
+}
+
 function setupFilters() {
   const years = uniqueSorted(state.rows, "forecast_year", true);
   const defaultYear = years[years.length - 1];
   setupYearTimeline(years, defaultYear);
-  fillSelect("filter-district", uniqueSorted(state.rows, "federal_district_name"), { allLabel: "Все округа" });
+  state.districtValues = uniqueSorted(state.rows, "federal_district_name");
   const regions = groupBy(state.rows, ["territory_id", "territory_name"])
-    .sort((a, b) => a.territory_name.localeCompare(b.territory_name, "ru"));
+    .sort((a, b) => regionLabel(a.territory_name).localeCompare(regionLabel(b.territory_name), currentLocale()));
   renderRegionFilter(regions);
-  const sectors = groupBy(state.rows, ["activity_id", "okved_section", "activity_name"])
-    .sort((a, b) => String(a.okved_section).localeCompare(String(b.okved_section), "ru"));
-  fillSelect("filter-sector", sectors.map((row) => row.activity_id), {
-    allLabel: "Все отрасли",
-    formatter: (id) => {
-      const row = sectors.find((item) => item.activity_id === id);
-      return row ? `${row.okved_section} — ${row.activity_name}` : id;
-    }
-  });
+  state.sectorRows = groupBy(state.rows, ["activity_id", "okved_section", "activity_name"])
+    .sort((a, b) => String(a.okved_section).localeCompare(String(b.okved_section), currentLocale()));
+  refreshFilterSelects();
 
   ["filter-district", "filter-sector"]
     .forEach((id) => byId(id).addEventListener("change", readFiltersAndRender));
@@ -601,7 +705,7 @@ function scenarioLabel() {
     ...(meta.working_age_definition || []),
     ...(meta.productivity_scenario || []),
     ...(meta.supply_allocation_scenario || [])
-  ].filter(Boolean).join(" / ") || "базовый";
+  ].filter(Boolean).join(" / ") || t("scenario.base", {}, "базовый");
 }
 
 function scenarioShortLabel() {
@@ -616,7 +720,7 @@ function scenarioDetailLabel() {
   return [
     ...(meta.working_age_definition || []),
     ...(meta.supply_allocation_scenario || [])
-  ].filter(Boolean).join(" / ") || "возраст / распределение";
+  ].filter(Boolean).join(" / ") || t("scenario.detailFallback", {}, "возраст / распределение");
 }
 
 function latestCumulativeQuota(rows) {
@@ -675,12 +779,12 @@ function renderSectorQuickLinks(selectedRows) {
   const sectors = groupBy(state.rows, ["activity_id", "okved_section", "activity_name"])
     .sort((a, b) => String(a.okved_section).localeCompare(String(b.okved_section), "ru"));
   container.innerHTML = sectors.map((row) => {
-    const meta = SECTOR_META[row.okved_section] || { label: row.okved_section, icon: "spark" };
+    const meta = SECTOR_META[row.okved_section] || { labelKey: "", fallback: row.okved_section, icon: "spark" };
     const value = totals.get(row.activity_id) || 0;
     const active = state.filters.sector === row.activity_id ? " active" : "";
     return `<button class="sector-button${active}" type="button" data-sector-id="${escapeHtml(row.activity_id)}" title="${escapeHtml(row.activity_name)}">
       ${sectorIconSvg(meta.icon)}
-      <span><strong>${escapeHtml(meta.label)}</strong><small>${escapeHtml(row.okved_section)} · ${fmtShort.format(value)}</small></span>
+      <span><strong>${escapeHtml(sectorShortLabel(meta))}</strong><small>${escapeHtml(row.okved_section)} · ${fmtShort.format(value)}</small></span>
     </button>`;
   }).join("");
   container.querySelectorAll("[data-sector-id]").forEach((button) => {
@@ -714,13 +818,17 @@ function renderFactualBase(factualRows) {
     ? baseRows.filter((row) => row.employment_persons > 0).length / baseRows.length
     : 0;
 
-  byId("fact-base-employment").textContent = baseEmployment ? fmt.format(baseEmployment) : "н/д";
-  byId("fact-employment-delta").textContent = firstEmployment ? `${delta >= 0 ? "+" : ""}${fmt.format(delta)}` : "н/д";
-  byId("fact-productivity").textContent = productivity ? fmtDecimal.format(productivity) : "н/д";
-  byId("fact-coverage").textContent = baseRows.length ? fmtPercent.format(complete) : "н/д";
+  byId("fact-base-employment").textContent = baseEmployment ? fmt.format(baseEmployment) : t("common.noData", {}, "н/д");
+  byId("fact-employment-delta").textContent = firstEmployment ? `${delta >= 0 ? "+" : ""}${fmt.format(delta)}` : t("common.noData", {}, "н/д");
+  byId("fact-productivity").textContent = productivity ? fmtDecimal.format(productivity) : t("common.noData", {}, "н/д");
+  byId("fact-coverage").textContent = baseRows.length ? fmtPercent.format(complete) : t("common.noData", {}, "н/д");
   byId("fact-caption").textContent = factualRows.length
-    ? `Фактические ряды ${firstYear}-${baseYear}; значения фильтруются по округу, региону и ОКВЭД.`
-    : "Фактическая история не найдена в статических данных.";
+    ? t(
+      "fact.captionDynamic",
+      { firstYear, baseYear },
+      `Фактические ряды ${firstYear}-${baseYear}; значения фильтруются по округу, региону и ОКВЭД.`
+    )
+    : t("fact.noHistory", {}, "Фактическая история не найдена в статических данных.");
 }
 
 function renderEconomicLink(factualRows, horizonRows) {
@@ -744,7 +852,7 @@ function renderEconomicLink(factualRows, horizonRows) {
       points.push({
         x: Math.log(cur.employment_persons / prev.employment_persons),
         y: Math.log(cur.vrp_constant_2016_mln_rub / prev.vrp_constant_2016_mln_rub),
-        label: `${cur.territory_name}<br>${cur.okved_section} — ${cur.activity_name}<br>${prev.year}-${cur.year}`
+        label: `${regionLabel(cur.territory_name)}<br>${sectorFullLabel(cur)}<br>${prev.year}-${cur.year}`
       });
     }
   });
@@ -764,20 +872,28 @@ function renderEconomicLink(factualRows, horizonRows) {
     customdata: points.map((point) => point.label),
     type: "scatter",
     mode: "markers",
-    name: "Ячейки регион × отрасль",
+    name: t("chart.economic.cellsName", {}, "Ячейки регион × отрасль"),
     marker: { size: 6, color: "#0B5ED7", opacity: 0.34 },
-    hovertemplate: "%{customdata}<br>Δln занятости: %{x:.2%}<br>Δln ВРП: %{y:.2%}<extra></extra>"
+    hovertemplate: t(
+      "chart.economic.cellsHover",
+      {},
+      "%{customdata}<br>Δln занятости: %{x:.2%}<br>Δln ВРП: %{y:.2%}<extra></extra>"
+    )
   }, {
     x: [minX, maxX],
     y: [intercept + slope * minX, intercept + slope * maxX],
     type: "scatter",
     mode: "lines",
-    name: "Линейная связь",
+    name: t("chart.economic.lineName", {}, "Линейная связь"),
     line: { color: "#E23B52", width: 2.5 },
-    hovertemplate: "Оценка: Δln ВРП = a + b × Δln занятости<extra></extra>"
+    hovertemplate: t(
+      "chart.economic.lineHover",
+      {},
+      "Оценка: Δln ВРП = a + b × Δln занятости<extra></extra>"
+    )
   }], chartLayout("", {
-    xaxis: { title: "Δln занятости", tickformat: ".0%", zeroline: true, fixedrange: true },
-    yaxis: { title: "Δln реального ВРП", tickformat: ".0%", zeroline: true, fixedrange: true },
+    xaxis: { title: t("chart.economic.xEmploymentLog", {}, "Δln занятости"), tickformat: ".0%", zeroline: true, fixedrange: true },
+    yaxis: { title: t("chart.economic.yVrpLog", {}, "Δln реального ВРП"), tickformat: ".0%", zeroline: true, fixedrange: true },
     legend: { orientation: "h", x: 0, y: 1.14, font: { size: 11 } },
     margin: { t: 46, r: 14, b: 48, l: 64 }
   }), plotConfig());
@@ -794,7 +910,12 @@ function renderEconomicLink(factualRows, horizonRows) {
     if (!prevVrp || !curVrp || !prev.value_persons || !cur.value_persons) continue;
     const empGrowth = Math.log(cur.value_persons / prev.value_persons);
     const vrpGrowth = Math.log(curVrp / prevVrp);
-    factualSeries.push({ year: Number(cur.year), employment: empGrowth, productivity: vrpGrowth - empGrowth, source: "факт" });
+    factualSeries.push({
+      year: Number(cur.year),
+      employment: empGrowth,
+      productivity: vrpGrowth - empGrowth,
+      source: t("chart.source.fact", {}, "факт")
+    });
   }
   const forecastYears = uniqueSorted(horizonRows, "forecast_year", true).map(Number);
   const forecastSeries = forecastYears.map((year) => {
@@ -805,7 +926,7 @@ function renderEconomicLink(factualRows, horizonRows) {
       year,
       employment: Math.log((1 + target) / (1 + productivity)),
       productivity: Math.log(1 + productivity),
-      source: "прогноз"
+      source: t("chart.source.forecast", {}, "прогноз")
     };
   });
   const selected = [
@@ -817,19 +938,19 @@ function renderEconomicLink(factualRows, horizonRows) {
     x: labels,
     y: selected.map((row) => row.employment),
     type: "bar",
-    name: "Вклад занятости",
+    name: t("chart.economic.employmentContribution", {}, "Вклад занятости"),
     marker: { color: "#0B5ED7", opacity: 0.82 },
-    hovertemplate: "%{x}<br>Вклад занятости: %{y:.2%}<extra></extra>"
+    hovertemplate: t("chart.economic.employmentHover", {}, "%{x}<br>Вклад занятости: %{y:.2%}<extra></extra>")
   }, {
     x: labels,
     y: selected.map((row) => row.productivity),
     type: "bar",
-    name: "Вклад производительности",
+    name: t("chart.economic.productivityContribution", {}, "Вклад производительности"),
     marker: { color: "#0AA77A", opacity: 0.82 },
-    hovertemplate: "%{x}<br>Вклад производительности: %{y:.2%}<extra></extra>"
+    hovertemplate: t("chart.economic.productivityHover", {}, "%{x}<br>Вклад производительности: %{y:.2%}<extra></extra>")
   }], chartLayout("", {
-    xaxis: { title: "Год", fixedrange: true },
-    yaxis: { title: "Лог-темп роста", tickformat: ".1%", zeroline: true, fixedrange: true },
+    xaxis: { title: t("chart.common.year", {}, "Год"), fixedrange: true },
+    yaxis: { title: t("chart.economic.logGrowthRate", {}, "Лог-темп роста"), tickformat: ".1%", zeroline: true, fixedrange: true },
     legend: { orientation: "h", x: 0, y: 1.14, font: { size: 11 } },
     margin: { t: 46, r: 14, b: 64, l: 62 },
     barmode: "relative"
@@ -848,31 +969,31 @@ function renderTrend(horizonRows, factualRows) {
     y: factualData.map((row) => row.value_persons),
     type: "scatter",
     mode: "lines+markers",
-    name: "Факт: занятость",
+    name: t("chart.trend.factEmployment", {}, "Факт: занятость"),
     line: { color: "#0AA77A", width: 3 },
     marker: { size: 6, color: "#0AA77A", line: { width: 1.5, color: "#ffffff" } },
-    hovertemplate: "Год %{x}<br>Фактическая занятость: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.trend.factEmploymentHover", {}, "Год %{x}<br>Фактическая занятость: %{y:,.0f} человек<extra></extra>")
   }, {
     x: forecastData.map((row) => row.forecast_year),
     y: forecastData.map((row) => row.value_persons),
     type: "scatter",
     mode: "lines+markers",
-    name: "Прогноз: требуемая занятость",
+    name: t("chart.trend.requiredEmployment", {}, "Прогноз: требуемая занятость"),
     line: { color: "#0B5ED7", width: 3, shape: "spline", smoothing: 0.35 },
     marker: { size: 6, color: "#0B5ED7", line: { width: 1.5, color: "#ffffff" } },
-    hovertemplate: "Год %{x}<br>Требуемая занятость: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.trend.requiredEmploymentHover", {}, "Год %{x}<br>Требуемая занятость: %{y:,.0f} человек<extra></extra>")
   }, {
     x: needData.map((row) => row.forecast_year),
     y: needData.map((row) => row.value_persons),
     type: "scatter",
     mode: "lines",
-    name: "Остаточная потребность",
+    name: t("chart.trend.residualNeed", {}, "Остаточная потребность"),
     line: { color: "#E23B52", width: 2, dash: "dot" },
-    hovertemplate: "Год %{x}<br>Остаточная потребность: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.trend.residualNeedHover", {}, "Год %{x}<br>Остаточная потребность: %{y:,.0f} человек<extra></extra>")
   }];
   Plotly.react("chart-year", traces, chartLayout("", {
-    xaxis: { title: "Год", dtick: window.innerWidth < 720 ? 4 : 2, fixedrange: true },
-    yaxis: { title: "Человек", rangemode: "tozero", fixedrange: true },
+    xaxis: { title: t("chart.common.year", {}, "Год"), dtick: window.innerWidth < 720 ? 4 : 2, fixedrange: true },
+    yaxis: { title: t("chart.common.persons", {}, "Человек"), rangemode: "tozero", fixedrange: true },
     legend: { orientation: "h", x: 0, y: 1.12, font: { size: 11 } },
     shapes: [{
       type: "line",
@@ -887,7 +1008,7 @@ function renderTrend(horizonRows, factualRows) {
       x: 2024,
       y: 1,
       yref: "paper",
-      text: "база 2024",
+      text: t("chart.trend.base2024", {}, "база 2024"),
       showarrow: false,
       xanchor: "right",
       yanchor: "bottom",
@@ -908,35 +1029,35 @@ function renderQuotaTrend(horizonRows) {
     x: annualQuotaData.map((row) => row.forecast_year),
     y: annualQuotaData.map((row) => row.value_persons),
     type: "bar",
-    name: "Рекомендуемая годовая квота",
+    name: t("metric.recommendedAnnualQuota", {}, "Рекомендуемая годовая квота"),
     marker: { color: "#0B5ED7", opacity: 0.82 },
-    hovertemplate: "Год %{x}<br>Рекомендуемая квота: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.quota.annualHover", {}, "Год %{x}<br>Рекомендуемая квота: %{y:,.0f} человек<extra></extra>")
   }, {
     x: cumulativeQuotaData.map((row) => row.forecast_year),
     y: cumulativeQuotaData.map((row) => row.value_persons),
     type: "scatter",
     mode: "lines+markers",
-    name: "Накопленная квота с 2025 г.",
+    name: t("metric.cumulativeQuota", {}, "Накопленная квота с 2025 г."),
     yaxis: "y2",
     line: { color: "#0AA77A", width: 3, shape: "spline", smoothing: 0.35 },
     marker: { size: 5, color: "#0AA77A", line: { width: 1, color: "#ffffff" } },
-    hovertemplate: "Год %{x}<br>Накопленная квота с 2025 г.: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.quota.cumulativeHover", {}, "Год %{x}<br>Накопленная квота с 2025 г.: %{y:,.0f} человек<extra></extra>")
   }, {
     x: stockData.map((row) => row.forecast_year),
     y: stockData.map((row) => row.value_persons),
     type: "scatter",
     mode: "lines+markers",
-    name: "Дефицит на конец года",
+    name: t("metric.stockNeed", {}, "Дефицит на конец года"),
     yaxis: "y2",
     line: { color: "#E23B52", width: 2.5, dash: "dot" },
     marker: { size: 5, color: "#E23B52", line: { width: 1, color: "#ffffff" } },
-    hovertemplate: "Год %{x}<br>Дефицит на конец года: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.quota.stockHover", {}, "Год %{x}<br>Дефицит на конец года: %{y:,.0f} человек<extra></extra>")
   }];
   Plotly.react("chart-year", traces, chartLayout("", {
-    xaxis: { title: "Год", dtick: window.innerWidth < 720 ? 5 : 2, fixedrange: true },
-    yaxis: { title: "Рекомендуемая квота", rangemode: "tozero", fixedrange: true },
+    xaxis: { title: t("chart.common.year", {}, "Год"), dtick: window.innerWidth < 720 ? 5 : 2, fixedrange: true },
+    yaxis: { title: t("chart.quota.annualAxis", {}, "Рекомендуемая квота"), rangemode: "tozero", fixedrange: true },
     yaxis2: {
-      title: "Дефицит / накопленная квота",
+      title: t("chart.quota.secondaryAxis", {}, "Дефицит / накопленная квота"),
       overlaying: "y",
       side: "right",
       rangemode: "tozero",
@@ -965,31 +1086,31 @@ function renderResourceBalance(horizonRows) {
     y: requiredData.map((row) => row.value_persons),
     type: "scatter",
     mode: "lines",
-    name: "Всего требуется трудовых ресурсов",
+    name: t("chart.resource.required", {}, "Всего требуется трудовых ресурсов"),
     line: { color: "#071B48", width: 3 },
-    hovertemplate: "Год %{x}<br>Требуемая занятость: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.resource.requiredHover", {}, "Год %{x}<br>Требуемая занятость: %{y:,.0f} человек<extra></extra>")
   }, {
     x: reserveData.map((row) => row.forecast_year),
     y: reserveData.map((row) => row.value_persons),
     type: "bar",
-    name: "Мобилизационный резерв безработных",
+    name: t("chart.resource.reserve", {}, "Мобилизационный резерв безработных"),
     yaxis: "y2",
     marker: { color: "#F59E0B", opacity: 0.78 },
-    hovertemplate: "Год %{x}<br>Резерв безработных: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.resource.reserveHover", {}, "Год %{x}<br>Резерв безработных: %{y:,.0f} человек<extra></extra>")
   }, {
     x: migrantData.map((row) => row.forecast_year),
     y: migrantData.map((row) => row.value_persons),
     type: "bar",
-    name: "Внешние мигранты: дефицит на конец года",
+    name: t("chart.resource.migrants", {}, "Внешние мигранты: дефицит на конец года"),
     yaxis: "y2",
     marker: { color: "#E23B52", opacity: 0.78 },
-    hovertemplate: "Год %{x}<br>Дефицит на конец года: %{y:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.quota.stockHover", {}, "Год %{x}<br>Дефицит на конец года: %{y:,.0f} человек<extra></extra>")
   }];
   Plotly.react("chart-resource", traces, chartLayout("", {
-    xaxis: { title: "Год", dtick: window.innerWidth < 720 ? 5 : 2, fixedrange: true },
-    yaxis: { title: "Всего требуется", rangemode: "tozero", fixedrange: true },
+    xaxis: { title: t("chart.common.year", {}, "Год"), dtick: window.innerWidth < 720 ? 5 : 2, fixedrange: true },
+    yaxis: { title: t("chart.resource.requiredAxis", {}, "Всего требуется"), rangemode: "tozero", fixedrange: true },
     yaxis2: {
-      title: "Резерв / мигранты",
+      title: t("chart.resource.secondaryAxis", {}, "Резерв / мигранты"),
       overlaying: "y",
       side: "right",
       rangemode: "tozero",
@@ -1025,10 +1146,10 @@ function renderProductivityAndShares(horizonRows, sectorRows) {
     y: productivitySeries.map((row) => row.yearly),
     type: "scatter",
     mode: "lines+markers",
-    name: "Годовой прогноз производительности",
+    name: t("chart.productivity.yearly", {}, "Годовой прогноз производительности"),
     line: { color: "#0B5ED7", width: 3, shape: "spline", smoothing: 0.35 },
     marker: { size: 5, color: "#0B5ED7", line: { width: 1, color: "#ffffff" } },
-    hovertemplate: "Год %{x}<br>Рост производительности: %{y:.2%}<extra></extra>"
+    hovertemplate: t("chart.productivity.yearlyHover", {}, "Год %{x}<br>Рост производительности: %{y:.2%}<extra></extra>")
   }];
   const hasStaticForecast = productivitySeries.some((row) => Math.abs(row.static - row.yearly) > 0.00001);
   if (hasStaticForecast) {
@@ -1037,9 +1158,9 @@ function renderProductivityAndShares(horizonRows, sectorRows) {
       y: productivitySeries.map((row) => row.static),
       type: "scatter",
       mode: "lines",
-      name: "Статическая оценка производительности",
+      name: t("chart.productivity.static", {}, "Статическая оценка производительности"),
       line: { color: "#6A7FA6", width: 2, dash: "dot" },
-      hovertemplate: "Год %{x}<br>Статическая оценка: %{y:.2%}<extra></extra>"
+      hovertemplate: t("chart.productivity.staticHover", {}, "Год %{x}<br>Статическая оценка: %{y:.2%}<extra></extra>")
     });
   }
   traces.push({
@@ -1047,14 +1168,14 @@ function renderProductivityAndShares(horizonRows, sectorRows) {
     y: productivitySeries.map((row) => row.target),
     type: "scatter",
     mode: "lines",
-    name: "Целевой рост ВРП",
+    name: t("chart.productivity.target", {}, "Целевой рост ВРП"),
     line: { color: "#0AA77A", width: 2.4, dash: "dash" },
-    hovertemplate: "Год %{x}<br>Целевой рост ВРП: %{y:.2%}<extra></extra>"
+    hovertemplate: t("chart.productivity.targetHover", {}, "Год %{x}<br>Целевой рост ВРП: %{y:.2%}<extra></extra>")
   });
 
   Plotly.react("chart-productivity", traces, chartLayout("", {
-    xaxis: { title: "Год", dtick: window.innerWidth < 720 ? 5 : 2, fixedrange: true },
-    yaxis: { title: "Темп роста", tickformat: ".1%", fixedrange: true },
+    xaxis: { title: t("chart.common.year", {}, "Год"), dtick: window.innerWidth < 720 ? 5 : 2, fixedrange: true },
+    yaxis: { title: t("chart.productivity.growthRate", {}, "Темп роста"), tickformat: ".1%", fixedrange: true },
     legend: { orientation: "h", x: 0, y: 1.2, font: { size: 11 } },
     shapes: controlYearShapes(),
     annotations: controlYearAnnotations(),
@@ -1073,7 +1194,7 @@ function renderProductivityAndShares(horizonRows, sectorRows) {
   );
   const totalBaseEmployment = sum(sectorRows, "employment_2024_persons");
   const totalForecastSupply = sum(sectorRows, "domestic_sector_supply_allocated_persons");
-  const sectorLabels = sectors.map((sector) => `${sector.okved_section} — ${sector.activity_name}`);
+  const sectorLabels = sectors.map(sectorFullLabel);
   const baseShares = sectors.map((sector) => totalBaseEmployment
     ? (baseBySector.get(sector.activity_id) || 0) / totalBaseEmployment
     : 0);
@@ -1086,20 +1207,20 @@ function renderProductivityAndShares(horizonRows, sectorRows) {
     y: baseShares,
     customdata: sectorLabels,
     type: "bar",
-    name: "Доля занятости 2024",
+    name: t("chart.shares.base", {}, "Доля занятости 2024"),
     marker: { color: "#6A7FA6", opacity: 0.82 },
-    hovertemplate: "%{customdata}<br>Доля занятости 2024: %{y:.1%}<extra></extra>"
+    hovertemplate: t("chart.shares.baseHover", {}, "%{customdata}<br>Доля занятости 2024: %{y:.1%}<extra></extra>")
   }, {
     x: sectors.map((sector) => sector.okved_section),
     y: forecastShares,
     customdata: sectorLabels,
     type: "bar",
-    name: "Прогнозная доля внутреннего ресурса",
+    name: t("chart.shares.forecast", {}, "Прогнозная доля внутреннего ресурса"),
     marker: { color: "#0B5ED7", opacity: 0.82 },
-    hovertemplate: "%{customdata}<br>Прогнозная доля: %{y:.1%}<extra></extra>"
+    hovertemplate: t("chart.shares.forecastHover", {}, "%{customdata}<br>Прогнозная доля: %{y:.1%}<extra></extra>")
   }], chartLayout("", {
-    xaxis: { title: "Секция ОКВЭД", fixedrange: true },
-    yaxis: { title: "Доля", tickformat: ".0%", rangemode: "tozero", fixedrange: true },
+    xaxis: { title: t("chart.common.okvedSection", {}, "Секция ОКВЭД"), fixedrange: true },
+    yaxis: { title: t("chart.common.share", {}, "Доля"), tickformat: ".0%", rangemode: "tozero", fixedrange: true },
     legend: { orientation: "h", x: 0, y: 1.18, font: { size: 11 } },
     margin: { t: 54, r: 14, b: 42, l: 58 },
     barmode: "group",
@@ -1122,9 +1243,9 @@ function renderRanking(chartId, data, labelKey, leftMargin) {
     type: "bar",
     orientation: "h",
     marker: { color: top.map((_, index) => index), colorscale: [[0, "#b9dcff"], [1, "#0B5ED7"]], showscale: false },
-    hovertemplate: "%{customdata}<br>%{x:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.ranking.hover", {}, "%{customdata}<br>%{x:,.0f} человек<extra></extra>")
   }], chartLayout("", {
-    xaxis: { title: "Человек", fixedrange: true },
+    xaxis: { title: t("chart.common.persons", {}, "Человек"), fixedrange: true },
     yaxis: { automargin: true, fixedrange: true },
     margin: { t: 10, r: 10, b: 36, l: window.innerWidth < 720 ? 116 : leftMargin }
   }), plotConfig());
@@ -1142,8 +1263,8 @@ function renderHeatmap(selectedRows) {
   });
   const z = allRegions.map((region) => allSectors.map((sector) => valueMap.get(`${region.territory_id}||${sector.activity_id}`) || 0));
   const custom = allRegions.map((region) => allSectors.map((sector) => [
-    region.territory_name,
-    `${sector.okved_section} — ${sector.activity_name}`
+    regionLabel(region.territory_name),
+    sectorFullLabel(sector)
   ]));
   const dynamicHeight = Math.max(
     window.innerWidth < 720 ? 840 : 980,
@@ -1151,16 +1272,16 @@ function renderHeatmap(selectedRows) {
   );
   Plotly.react("chart-heatmap", [{
     x: allSectors.map((sector) => sector.okved_section),
-    y: allRegions.map((region) => shortenLabel(region.territory_name, window.innerWidth < 720 ? 24 : 52)),
+    y: allRegions.map((region) => shortenLabel(regionLabel(region.territory_name), window.innerWidth < 720 ? 24 : 52)),
     z,
     customdata: custom,
     type: "heatmap",
     colorscale: [[0, "#F4F8FF"], [0.22, "#D6E9FF"], [0.58, "#62A8F8"], [1, "#0B5ED7"]],
-    colorbar: { title: "человек", tickformat: ",.0f" },
-    hovertemplate: "%{customdata[0]}<br>%{customdata[1]}<br>%{z:,.0f} человек<extra></extra>"
+    colorbar: { title: t("chart.common.personsLower", {}, "человек"), tickformat: ",.0f" },
+    hovertemplate: t("chart.heatmap.hover", {}, "%{customdata[0]}<br>%{customdata[1]}<br>%{z:,.0f} человек<extra></extra>")
   }], chartLayout("", {
     height: dynamicHeight,
-    xaxis: { title: "Секция ОКВЭД", side: "top", fixedrange: true },
+    xaxis: { title: t("chart.common.okvedSection", {}, "Секция ОКВЭД"), side: "top", fixedrange: true },
     yaxis: { automargin: true, fixedrange: true, tickfont: { size: window.innerWidth < 720 ? 9 : 10 } },
     margin: { t: 54, r: 14, b: 26, l: window.innerWidth < 720 ? 126 : 230 }
   }), plotConfig());
@@ -1179,9 +1300,11 @@ function renderAtlas(selectedRows) {
   const topSectorIds = new Set(sectorTotals.slice(0, 10).map((row) => row.activity_id));
   const atlasRows = selectedRows.map((row) => ({
     ...row,
-    atlas_region: topRegionIds.has(row.territory_id) ? row.territory_name : "Прочие регионы",
-    atlas_sector: topSectorIds.has(row.activity_id) ? `${row.okved_section} — ${row.activity_name}` : "Прочие отрасли",
-    atlas_district: row.federal_district_name || "Федеральный округ не указан"
+    atlas_region: topRegionIds.has(row.territory_id) ? regionLabel(row.territory_name) : t("atlas.otherRegions", {}, "Прочие регионы"),
+    atlas_sector: topSectorIds.has(row.activity_id) ? sectorFullLabel(row) : t("atlas.otherSectors", {}, "Прочие отрасли"),
+    atlas_district: row.federal_district_name
+      ? districtLabel(row.federal_district_name)
+      : t("atlas.unknownDistrict", {}, "Федеральный округ не указан")
   }));
   const districtRegion = groupBy(atlasRows, ["atlas_district", "atlas_region"]);
   const regionSector = groupBy(atlasRows, ["atlas_region", "atlas_sector"]);
@@ -1215,7 +1338,10 @@ function renderAtlas(selectedRows) {
       pad: 12,
       thickness: 13,
       line: { color: "#c4d4ea", width: 0.5 },
-      color: labels.map((label) => label.startsWith("Прочие") ? "#94a3b8" : "#0B5ED7")
+      color: labels.map((label) => [
+        t("atlas.otherRegions", {}, "Прочие регионы"),
+        t("atlas.otherSectors", {}, "Прочие отрасли")
+      ].includes(label) ? "#94a3b8" : "#0B5ED7")
     },
     link: {
       source: sources,
@@ -1223,7 +1349,7 @@ function renderAtlas(selectedRows) {
       value: values,
       color: "rgba(11, 94, 215, 0.22)"
     },
-    hovertemplate: "%{source.label} → %{target.label}<br>%{value:,.0f} человек<extra></extra>"
+    hovertemplate: t("chart.atlas.sankeyHover", {}, "%{source.label} → %{target.label}<br>%{value:,.0f} человек<extra></extra>")
   }], chartLayout("", {
     margin: { t: 18, r: 8, b: 18, l: 8 },
     font: { family: "Inter, Segoe UI, system-ui, sans-serif", size: 11, color: "#071b48" }
@@ -1236,10 +1362,10 @@ function renderAtlas(selectedRows) {
   const maxBubble = Math.max(...topCells.map((row) => row.dashboard_value_persons), 1);
   Plotly.react("chart-bubble-matrix", [{
     x: topCells.map((row) => row.okved_section),
-    y: topCells.map((row) => shortenLabel(row.territory_name, window.innerWidth < 720 ? 24 : 42)),
+    y: topCells.map((row) => shortenLabel(regionLabel(row.territory_name), window.innerWidth < 720 ? 24 : 42)),
     customdata: topCells.map((row) => [
-      row.territory_name,
-      `${row.okved_section} — ${row.activity_name}`,
+      regionLabel(row.territory_name),
+      sectorFullLabel(row),
       row.dashboard_value_persons,
       row.foreign_labor_stock_need_persons,
       row.cumulative_recommended_quota_persons
@@ -1252,15 +1378,19 @@ function renderAtlas(selectedRows) {
       color: topCells.map((row) => row.foreign_labor_stock_need_persons),
       colorscale: [[0, "#b9dcff"], [0.65, "#0B5ED7"], [1, "#E23B52"]],
       showscale: true,
-      colorbar: { title: "Дефицит", tickformat: ",.0f" },
+      colorbar: { title: t("metric.shortStock", {}, "Дефицит"), tickformat: ",.0f" },
       line: { color: "#ffffff", width: 1.2 },
       opacity: 0.84
     },
     hovertemplate: "%{customdata[0]}<br>%{customdata[1]}<br>" +
       `${metricLabel()}: %{customdata[2]:,.0f}<br>` +
-      "Дефицит на конец года: %{customdata[3]:,.0f}<br>Накопленная квота: %{customdata[4]:,.0f}<extra></extra>"
+      t(
+        "chart.atlas.bubbleHoverTail",
+        {},
+        "Дефицит на конец года: %{customdata[3]:,.0f}<br>Накопленная квота: %{customdata[4]:,.0f}<extra></extra>"
+      )
   }], chartLayout("", {
-    xaxis: { title: "Секция ОКВЭД", fixedrange: true },
+    xaxis: { title: t("chart.common.okvedSection", {}, "Секция ОКВЭД"), fixedrange: true },
     yaxis: { automargin: true, fixedrange: true, tickfont: { size: window.innerWidth < 720 ? 9 : 10 } },
     margin: { t: 18, r: 64, b: 42, l: window.innerWidth < 720 ? 118 : 190 }
   }), plotConfig());
@@ -1286,7 +1416,7 @@ function topSectorsByRegion(rows) {
       .slice(0, 3);
     byRegion.set(key, positiveItems.length
       ? positiveItems.map((item) => `${item.okved_section}: ${fmtShort.format(item.value_persons)}`).join("; ")
-      : "нет положительных отраслей");
+      : t("map.noPositiveSectors", {}, "нет положительных отраслей"));
   });
   return byRegion;
 }
@@ -1295,7 +1425,11 @@ function renderMap(selectedRows) {
   const fallback = byId("map-fallback");
   fallback.classList.add("hidden");
   if (!state.geojson || !state.crosswalk.length) {
-    byId("map-status").textContent = "GeoJSON не найден; карта будет добавлена после подключения геослоя.";
+    byId("map-status").textContent = t(
+      "map.geoMissing",
+      {},
+      "GeoJSON не найден; карта будет добавлена после подключения геослоя."
+    );
     fallback.classList.remove("hidden");
     fallback.innerHTML = fallbackRegionList(selectedRows);
     byId("chart-map").innerHTML = "";
@@ -1322,18 +1456,26 @@ function renderMap(selectedRows) {
     valueByGeo.set(match.geo_key, row.value_persons);
     regionIdByGeo.set(match.geo_key, row.territory_id);
     tooltipByGeo.set(match.geo_key, {
-      region: row.territory_name,
+      region: regionLabel(row.territory_name),
       value: row.value_persons,
-      topSectors: sectors.get(row.territory_id) || "нет положительных отраслей"
+      topSectors: sectors.get(row.territory_id) || t("map.noPositiveSectors", {}, "нет положительных отраслей")
     });
   });
   byId("map-status").textContent = selectedGeoKeys.length
     ? districtZoom
-      ? `Карта увеличена по федеральному округу: ${state.filters.district}.`
-      : `Карта увеличена по выбранным регионам: ${selectedGeoKeys.length}.`
+      ? t(
+        "map.zoomDistrict",
+        { district: districtLabel(state.filters.district) },
+        `Карта увеличена по федеральному округу: ${state.filters.district}.`
+      )
+      : t(
+        "map.zoomRegions",
+        { count: selectedGeoKeys.length },
+        `Карта увеличена по выбранным регионам: ${selectedGeoKeys.length}.`
+      )
     : state.unmatched?.status === "ok"
-    ? "Геослой подключен; сопоставлены все 85 модельных регионов."
-    : "Геослой подключен; часть сопоставлений требует проверки.";
+    ? t("map.allMatched", {}, "Геослой подключен; сопоставлены все 85 модельных регионов.")
+    : t("map.needsReview", {}, "Геослой подключен; часть сопоставлений требует проверки.");
   renderSvgMap(valueByGeo, tooltipByGeo, selectedGeoKeys, regionIdByGeo);
 }
 
@@ -1438,11 +1580,13 @@ function renderSvgMap(valueByGeo, tooltipByGeo, selectedGeoKeys = [], regionIdBy
     }).join(" ")).join(" ");
     const tooltip = tooltipByGeo.get(name);
     const fill = noModelData ? "#a9b5c4" : colorForValue(value, maxValue);
-    const dataTop = noModelData ? "нет модельных данных" : (tooltip?.topSectors || "нет данных");
+    const dataTop = noModelData
+      ? t("map.noModelData", {}, "нет модельных данных")
+      : (tooltip?.topSectors || t("map.noData", {}, "нет данных"));
     return `<path d="${d}" class="map-region${selectedClass}${noDataClass}" data-territory-id="${escapeHtml(regionIdByGeo.get(name) || "")}" data-region="${escapeHtml(tooltip?.region || name)}" data-value="${escapeHtml(fmt.format(value))}" data-top="${escapeHtml(dataTop)}" fill="${fill}" />`;
   }).join("");
   container.innerHTML = `
-    <svg class="svg-map" viewBox="0 0 ${width} ${height}" role="img" aria-label="Картограмма субъектов Российской Федерации">
+    <svg class="svg-map" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("map.svgAria", {}, "Картограмма субъектов Российской Федерации"))}">
       <rect x="0" y="0" width="${width}" height="${height}" fill="#f8fafc" />
       <g>${pathParts}</g>
       ${mapLegend(width - legendWidth + 12, 42, 18, Math.min(220, height - 90), maxValue)}
@@ -1453,7 +1597,7 @@ function renderSvgMap(valueByGeo, tooltipByGeo, selectedGeoKeys = [], regionIdBy
   container.querySelectorAll(".map-region").forEach((path) => {
     path.addEventListener("mousemove", (event) => {
       tooltip.classList.remove("hidden");
-      tooltip.innerHTML = `<strong>${path.dataset.region}</strong><br>Год: ${state.filters.year}<br>${path.dataset.value} человек<br>Топ-3 ОКВЭД: ${path.dataset.top}`;
+      tooltip.innerHTML = `<strong>${path.dataset.region}</strong><br>${escapeHtml(t("chart.common.year", {}, "Год"))}: ${state.filters.year}<br>${path.dataset.value} ${escapeHtml(t("chart.common.personsLower", {}, "человек"))}<br>${escapeHtml(t("map.topOkved", {}, "Топ-3 ОКВЭД"))}: ${path.dataset.top}`;
       const rect = container.getBoundingClientRect();
       tooltip.style.left = `${Math.min(event.clientX - rect.left + 14, rect.width - 280)}px`;
       tooltip.style.top = `${Math.max(event.clientY - rect.top - 10, 12)}px`;
@@ -1489,14 +1633,14 @@ function renderRegionPassport(selectedRows) {
     : null;
   if (!activeRegionId) {
     const districtHint = state.filters.district && state.filters.district !== "__all__"
-      ? "Карта приближена к округу. Выберите субъект на карте или в фильтре, чтобы открыть паспорт."
-      : "Выберите субъект РФ на карте или в фильтре, чтобы открыть паспорт.";
+      ? t("passport.districtHint", {}, "Карта приближена к округу. Выберите субъект на карте или в фильтре, чтобы открыть паспорт.")
+      : t("passport.defaultHint", {}, "Выберите субъект РФ на карте или в фильтре, чтобы открыть паспорт.");
     target.innerHTML = `<p>${escapeHtml(districtHint)}</p>`;
     return;
   }
   const sourceRows = selectedRows.filter((row) => row.territory_id === activeRegionId);
   if (!sourceRows.length) {
-    target.innerHTML = "<p>Выберите регион на карте или в фильтре, чтобы открыть отраслевой паспорт.</p>";
+    target.innerHTML = `<p>${escapeHtml(t("passport.emptyHint", {}, "Выберите регион на карте или в фильтре, чтобы открыть отраслевой паспорт."))}</p>`;
     return;
   }
   const regionName = sourceRows[0]?.territory_name;
@@ -1515,12 +1659,12 @@ function renderRegionPassport(selectedRows) {
     .sort((a, b) => b.quota - a.quota)
     .slice(0, 5);
   target.innerHTML = `
-    <strong>${escapeHtml(regionName || "Регион")}</strong>
+    <strong>${escapeHtml(regionName ? regionLabel(regionName) : t("table.region", {}, "Регион"))}</strong>
     <div class="passport-list">
       ${top.map((row) => `<article>
-        <span>${escapeHtml(row.okved_section)} — ${escapeHtml(row.activity_name)}</span>
+        <span>${escapeHtml(sectorFullLabel(row))}</span>
         <b>${fmt.format(row.quota)}</b>
-        <small>дефицит ${fmt.format(row.stock)} · накопленная ${fmt.format(row.cumulative)} · производительность ${formatPercentField(row.productivity)} · резерв ${fmt.format(row.reserve)}</small>
+        <small>${escapeHtml(t("passport.deficit", {}, "дефицит"))} ${fmt.format(row.stock)} · ${escapeHtml(t("passport.cumulative", {}, "накопленная"))} ${fmt.format(row.cumulative)} · ${escapeHtml(t("passport.productivity", {}, "производительность"))} ${formatPercentField(row.productivity)} · ${escapeHtml(t("passport.reserve", {}, "резерв"))} ${fmt.format(row.reserve)}</small>
       </article>`).join("")}
     </div>
   `;
@@ -1563,14 +1707,14 @@ function mapLegend(x, y, width, height, maxValue) {
     const tickY = y + height - t * height;
     return `<line x1="${x + width}" x2="${x + width + 6}" y1="${tickY}" y2="${tickY}" stroke="#475569" /><text x="${x + width + 10}" y="${tickY + 4}" font-size="12" fill="#1f2937">${fmtShort.format(value)}</text>`;
   }).join("");
-  return `<g class="map-legend"><text x="${x}" y="${y - 16}" font-size="12" font-weight="700" fill="#1f2937">человек</text>${rects}<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="none" stroke="#475569" />${ticks}</g>`;
+  return `<g class="map-legend"><text x="${x}" y="${y - 16}" font-size="12" font-weight="700" fill="#1f2937">${escapeHtml(t("chart.common.personsLower", {}, "человек"))}</text>${rects}<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="none" stroke="#475569" />${ticks}</g>`;
 }
 
 function fallbackRegionList(rows) {
   const top = groupBy(rows, ["territory_name"])
     .sort((a, b) => b.value_persons - a.value_persons)
     .slice(0, 12);
-  return `<strong>Табличный fallback карты</strong><ol>${top.map((row) => `<li>${escapeHtml(row.territory_name)} — ${fmt.format(row.value_persons)} человек</li>`).join("")}</ol>`;
+  return `<strong>${escapeHtml(t("map.tableFallback", {}, "Табличный fallback карты"))}</strong><ol>${top.map((row) => `<li>${escapeHtml(regionLabel(row.territory_name))} — ${fmt.format(row.value_persons)} ${escapeHtml(t("chart.common.personsLower", {}, "человек"))}</li>`).join("")}</ol>`;
 }
 
 function getCurrentTableRows() {
@@ -1581,7 +1725,9 @@ function getCurrentTableRows() {
       row.year,
       row.forecast_year,
       row.territory_name,
+      regionLabel(row.territory_name),
       row.federal_district_name,
+      districtLabel(row.federal_district_name),
       row.okved_section,
       row.activity_name
     ].some((value) => String(value || "").toLowerCase().includes(query)));
@@ -1593,7 +1739,7 @@ function getCurrentTableRows() {
     const numeric = typeof av === "number" || typeof bv === "number";
     const result = numeric
       ? toNumber(av) - toNumber(bv)
-      : String(av || "").localeCompare(String(bv || ""), "ru");
+      : String(av || "").localeCompare(String(bv || ""), currentLocale());
     return sortState.dir === "asc" ? result : -result;
   });
   return rows;
@@ -1614,33 +1760,33 @@ function renderTable() {
   if (state.tableMode === "forecast") {
     thead.innerHTML = `
       <tr>
-        <th><button type="button" data-sort="territory_name">Регион</button></th>
-        <th><button type="button" data-sort="federal_district_name">Округ</button></th>
-        <th><button type="button" data-sort="okved_section">ОКВЭД</button></th>
-        <th><button type="button" data-sort="activity_name">Отрасль</button></th>
-        <th class="num"><button type="button" data-sort="recommended_annual_quota_persons">Рекомендуемая годовая квота</button></th>
-        <th class="num"><button type="button" data-sort="foreign_labor_stock_need_persons">Дефицит на конец года</button></th>
-        <th class="num"><button type="button" data-sort="labor_demand_required_persons">Требуемая занятость</button></th>
-        <th class="num"><button type="button" data-sort="unemployment_reserve_sector_allocated_persons">Резерв безработных</button></th>
-        <th class="num"><button type="button" data-sort="domestic_sector_supply_total_with_unemployment_reserve_persons">Внутренний ресурс с резервом</button></th>
-        <th class="num"><button type="button" data-sort="employment_2024_persons">Занятость 2024</button></th>
-        <th class="num"><button type="button" data-sort="productivity_growth_forecast_yearly">Прогноз производительности</button></th>
-        <th class="num"><button type="button" data-sort="sector_share_in_region_2024">Доля отрасли 2024</button></th>
-        <th class="num"><button type="button" data-sort="supply_allocation_share">Прогнозная доля</button></th>
+        <th><button type="button" data-sort="territory_name">${escapeHtml(t("table.region", {}, "Регион"))}</button></th>
+        <th><button type="button" data-sort="federal_district_name">${escapeHtml(t("table.district", {}, "Округ"))}</button></th>
+        <th><button type="button" data-sort="okved_section">${escapeHtml(t("table.okved", {}, "ОКВЭД"))}</button></th>
+        <th><button type="button" data-sort="activity_name">${escapeHtml(t("table.industry", {}, "Отрасль"))}</button></th>
+        <th class="num"><button type="button" data-sort="recommended_annual_quota_persons">${escapeHtml(t("metric.recommendedAnnualQuota", {}, "Рекомендуемая годовая квота"))}</button></th>
+        <th class="num"><button type="button" data-sort="foreign_labor_stock_need_persons">${escapeHtml(t("metric.stockNeed", {}, "Дефицит на конец года"))}</button></th>
+        <th class="num"><button type="button" data-sort="labor_demand_required_persons">${escapeHtml(t("table.requiredEmployment", {}, "Требуемая занятость"))}</button></th>
+        <th class="num"><button type="button" data-sort="unemployment_reserve_sector_allocated_persons">${escapeHtml(t("table.unemployedReserve", {}, "Резерв безработных"))}</button></th>
+        <th class="num"><button type="button" data-sort="domestic_sector_supply_total_with_unemployment_reserve_persons">${escapeHtml(t("table.domesticResourceWithReserve", {}, "Внутренний ресурс с резервом"))}</button></th>
+        <th class="num"><button type="button" data-sort="employment_2024_persons">${escapeHtml(t("table.employment2024", {}, "Занятость 2024"))}</button></th>
+        <th class="num"><button type="button" data-sort="productivity_growth_forecast_yearly">${escapeHtml(t("table.productivityForecast", {}, "Прогноз производительности"))}</button></th>
+        <th class="num"><button type="button" data-sort="sector_share_in_region_2024">${escapeHtml(t("table.sectorShare2024", {}, "Доля отрасли 2024"))}</button></th>
+        <th class="num"><button type="button" data-sort="supply_allocation_share">${escapeHtml(t("table.forecastShare", {}, "Прогнозная доля"))}</button></th>
       </tr>
     `;
     tbody.innerHTML = visibleRows.map((row) => `
       <tr>
-        <td>${escapeHtml(row.territory_name)}</td>
-        <td>${escapeHtml(row.federal_district_name)}</td>
+        <td>${escapeHtml(regionLabel(row.territory_name))}</td>
+        <td>${escapeHtml(districtLabel(row.federal_district_name))}</td>
         <td>${escapeHtml(row.okved_section)}</td>
         <td>${escapeHtml(row.activity_name)}</td>
         <td class="num">${fmt.format(row.recommended_annual_quota_persons || row.dashboard_value_persons)}</td>
         <td class="num">${fmt.format(row.foreign_labor_stock_need_persons)}</td>
-        <td class="num">${row.labor_demand_required_persons ? fmt.format(row.labor_demand_required_persons) : "н/д"}</td>
+        <td class="num">${row.labor_demand_required_persons ? fmt.format(row.labor_demand_required_persons) : t("common.noData", {}, "н/д")}</td>
         <td class="num">${fmt.format(row.unemployment_reserve_sector_allocated_persons)}</td>
-        <td class="num">${row.domestic_sector_supply_total_with_unemployment_reserve_persons ? fmt.format(row.domestic_sector_supply_total_with_unemployment_reserve_persons) : "н/д"}</td>
-        <td class="num">${row.employment_2024_persons ? fmt.format(row.employment_2024_persons) : "н/д"}</td>
+        <td class="num">${row.domestic_sector_supply_total_with_unemployment_reserve_persons ? fmt.format(row.domestic_sector_supply_total_with_unemployment_reserve_persons) : t("common.noData", {}, "н/д")}</td>
+        <td class="num">${row.employment_2024_persons ? fmt.format(row.employment_2024_persons) : t("common.noData", {}, "н/д")}</td>
         <td class="num">${formatPercentField(row.productivity_growth_forecast_yearly)}</td>
         <td class="num">${formatPercentField(row.sector_share_in_region_2024)}</td>
         <td class="num">${formatPercentField(row.supply_allocation_share)}</td>
@@ -1649,35 +1795,47 @@ function renderTable() {
   } else {
     thead.innerHTML = `
       <tr>
-        <th><button type="button" data-sort="year">Год</button></th>
-        <th><button type="button" data-sort="territory_name">Регион</button></th>
-        <th><button type="button" data-sort="federal_district_name">Округ</button></th>
-        <th><button type="button" data-sort="okved_section">ОКВЭД</button></th>
-        <th><button type="button" data-sort="activity_name">Отрасль</button></th>
-        <th class="num"><button type="button" data-sort="employment_persons">Занятость</button></th>
-        <th class="num"><button type="button" data-sort="vrp_constant_2016_mln_rub">ВРП 2016</button></th>
-        <th class="num"><button type="button" data-sort="labour_productivity_constant_2016_thousand_rub_per_person">Производительность</button></th>
+        <th><button type="button" data-sort="year">${escapeHtml(t("chart.common.year", {}, "Год"))}</button></th>
+        <th><button type="button" data-sort="territory_name">${escapeHtml(t("table.region", {}, "Регион"))}</button></th>
+        <th><button type="button" data-sort="federal_district_name">${escapeHtml(t("table.district", {}, "Округ"))}</button></th>
+        <th><button type="button" data-sort="okved_section">${escapeHtml(t("table.okved", {}, "ОКВЭД"))}</button></th>
+        <th><button type="button" data-sort="activity_name">${escapeHtml(t("table.industry", {}, "Отрасль"))}</button></th>
+        <th class="num"><button type="button" data-sort="employment_persons">${escapeHtml(t("table.employment", {}, "Занятость"))}</button></th>
+        <th class="num"><button type="button" data-sort="vrp_constant_2016_mln_rub">${escapeHtml(t("table.vrp2016", {}, "ВРП 2016"))}</button></th>
+        <th class="num"><button type="button" data-sort="labour_productivity_constant_2016_thousand_rub_per_person">${escapeHtml(t("table.productivity", {}, "Производительность"))}</button></th>
       </tr>
     `;
     tbody.innerHTML = visibleRows.map((row) => `
       <tr>
         <td>${fmt.format(row.year)}</td>
-        <td>${escapeHtml(row.territory_name)}</td>
-        <td>${escapeHtml(row.federal_district_name)}</td>
+        <td>${escapeHtml(regionLabel(row.territory_name))}</td>
+        <td>${escapeHtml(districtLabel(row.federal_district_name))}</td>
         <td>${escapeHtml(row.okved_section)}</td>
         <td>${escapeHtml(row.activity_name)}</td>
-        <td class="num">${row.employment_persons ? fmt.format(row.employment_persons) : "н/д"}</td>
-        <td class="num">${row.vrp_constant_2016_mln_rub ? fmtDecimal.format(row.vrp_constant_2016_mln_rub) : "н/д"}</td>
-        <td class="num">${row.labour_productivity_constant_2016_thousand_rub_per_person ? fmtDecimal.format(row.labour_productivity_constant_2016_thousand_rub_per_person) : "н/д"}</td>
+        <td class="num">${row.employment_persons ? fmt.format(row.employment_persons) : t("common.noData", {}, "н/д")}</td>
+        <td class="num">${row.vrp_constant_2016_mln_rub ? fmtDecimal.format(row.vrp_constant_2016_mln_rub) : t("common.noData", {}, "н/д")}</td>
+        <td class="num">${row.labour_productivity_constant_2016_thousand_rub_per_person ? fmtDecimal.format(row.labour_productivity_constant_2016_thousand_rub_per_person) : t("common.noData", {}, "н/д")}</td>
       </tr>
     `).join("");
   }
   const suffix = rows.length > visibleRows.length
-    ? `; показаны первые ${fmt.format(visibleRows.length)}, CSV содержит все отфильтрованные и отсортированные строки`
+    ? t(
+      "table.countSuffix",
+      { visible: fmt.format(visibleRows.length) },
+      `; показаны первые ${fmt.format(visibleRows.length)}, CSV содержит все отфильтрованные и отсортированные строки`
+    )
     : "";
   const base = state.tableMode === "forecast"
-    ? `${fmt.format(rows.length)} строк из ${fmt.format(state.tableRows.length)} за ${state.filters.year} год`
-    : `${fmt.format(rows.length)} строк из ${fmt.format(state.factualTableRows.length)} за 2017-2024`;
+    ? t(
+      "table.countForecast",
+      { rows: fmt.format(rows.length), total: fmt.format(state.tableRows.length), year: state.filters.year },
+      `${fmt.format(rows.length)} строк из ${fmt.format(state.tableRows.length)} за ${state.filters.year} год`
+    )
+    : t(
+      "table.countFactual",
+      { rows: fmt.format(rows.length), total: fmt.format(state.factualTableRows.length) },
+      `${fmt.format(rows.length)} строк из ${fmt.format(state.factualTableRows.length)} за 2017-2024`
+    );
   byId("table-count").textContent = `${base}${suffix}`;
 }
 
@@ -1781,10 +1939,13 @@ function render() {
   renderQuotaTrend(horizonRows);
   renderResourceBalance(horizonRows);
   renderProductivityAndShares(horizonRows, sectorRows);
-  renderRanking("chart-region", groupBy(selectedRows, ["territory_id", "territory_name"]), "territory_name", 220);
+  renderRanking("chart-region", groupBy(selectedRows, ["territory_id", "territory_name"]).map((row) => ({
+    ...row,
+    territory_label: regionLabel(row.territory_name)
+  })), "territory_label", 220);
   renderRanking("chart-sector", groupBy(selectedRows, ["activity_id", "okved_section", "activity_name"]).map((row) => ({
     ...row,
-    sector_label: `${row.okved_section} — ${row.activity_name}`
+    sector_label: sectorFullLabel(row)
   })), "sector_label", 250);
   renderAtlas(selectedRows);
   renderMap(selectedRows);
@@ -1792,8 +1953,18 @@ function render() {
   renderTable();
 }
 
+function refreshLanguage() {
+  updateFormatters();
+  window.AppI18n?.apply?.();
+  if (!state.rows.length) return;
+  refreshFilterSelects();
+  updateHeader();
+  render();
+}
+
 async function init() {
   try {
+    updateFormatters();
     state.meta = await fetchJson(DATA_PATHS.metadata);
     updateHeader();
     const [csvText, factualText, factualSummaryYear, geojson, crosswalk, unmatched] = await Promise.all([
@@ -1813,6 +1984,7 @@ async function init() {
     setupFilters();
     render();
     window.addEventListener("resize", debounce(render, 250));
+    window.addEventListener("app:i18n", refreshLanguage);
   } catch (error) {
     console.error(error);
     document.body.insertAdjacentHTML("beforeend", `<div class="fatal-error">${escapeHtml(error.message)}</div>`);
@@ -1827,4 +1999,13 @@ function debounce(fn, delay) {
   };
 }
 
-document.addEventListener("DOMContentLoaded", init);
+function startApp() {
+  const i18nReady = window.AppI18n?.ready || Promise.resolve();
+  i18nReady.then(init);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", startApp, { once: true });
+} else {
+  startApp();
+}
