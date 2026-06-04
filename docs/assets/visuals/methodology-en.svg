@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Methodology</title>
+  <desc id="desc">Scenario indicators combine economic growth, productivity and internal reserve assumptions by region and industry.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5ed7"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#08285f" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="#f4f8fd"/>
+  <g opacity="0.58">
+    <path d="M0 118 H1200" stroke="#dbeafe"/>
+    <path d="M0 502 H1200" stroke="#dbeafe"/>
+  </g>
+  <text x="600.0" y="58" text-anchor="middle" font-size="34" font-weight="800" fill="#061b4a"><tspan x="600.0" dy="0">Methodology</tspan></text>
+  <text x="600.0" y="95" text-anchor="middle" font-size="18" font-weight="400" fill="#47618d"><tspan x="600.0" dy="0">Scenario indicators combine economic growth, productivity and internal reserve assumptions by region and industry.</tspan></text>
+  <g filter="url(#shadow)">
+<rect x="420" y="236" width="360" height="120" rx="24" fill="#061b4a"/>
+<text x="600" y="284" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff"><tspan x="600" dy="0">Scenario model</tspan></text>
+<text x="600" y="322" text-anchor="middle" font-size="18" font-weight="400" fill="#dbeafe"><tspan x="600" dy="0">target growth - productivity - reserve</tspan></text>
+
+  <rect x="80" y="160" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="114" cy="196" r="16" fill="#0b5ed7" opacity="0.16"/>
+  <circle cx="114" cy="196" r="7" fill="#0b5ed7"/>
+  <text x="252.0" y="202" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="252.0" dy="0">Recommended quota</tspan></text>
+  <text x="240.0" y="244" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="240.0" dy="0">annual inflow</tspan><tspan x="240.0" dy="22">needed to cover demand</tspan></text>
+
+<path d="M240 232 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="390" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="114" cy="426" r="16" fill="#385070" opacity="0.16"/>
+  <circle cx="114" cy="426" r="7" fill="#385070"/>
+  <text x="252.0" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="252.0" dy="0">Year-end deficit</tspan></text>
+  <text x="240.0" y="474" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="240.0" dy="0">uncovered stock</tspan><tspan x="240.0" dy="22">in the selected year</tspan></text>
+
+<path d="M240 462 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="390" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="454" cy="426" r="16" fill="#18a999" opacity="0.16"/>
+  <circle cx="454" cy="426" r="7" fill="#18a999"/>
+  <text x="592.0" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="592.0" dy="0">Reserve</tspan></text>
+  <text x="580.0" y="474" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="580.0" dy="0">unemployed labour</tspan><tspan x="580.0" dy="22">mobilized before external need</tspan></text>
+
+<path d="M580 462 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="390" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="794" cy="426" r="16" fill="#f59e0b" opacity="0.16"/>
+  <circle cx="794" cy="426" r="7" fill="#f59e0b"/>
+  <text x="932.0" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="932.0" dy="0">Productivity</tspan></text>
+  <text x="920.0" y="474" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="920.0" dy="0">weighted forecast</tspan><tspan x="920.0" dy="22">offsets labour demand</tspan></text>
+
+<path d="M920 462 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="160" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="794" cy="196" r="16" fill="#7c3aed" opacity="0.16"/>
+  <circle cx="794" cy="196" r="7" fill="#7c3aed"/>
+  <text x="932.0" y="202" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="932.0" dy="0">Regional-industry demand</tspan></text>
+  <text x="920.0" y="244" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="920.0" dy="0">region × OKVED cells</tspan><tspan x="920.0" dy="22">passport and table detail</tspan></text>
+
+<path d="M920 232 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Architecture</title>
+  <desc id="desc">Raw data flows through preprocessing and the quota/deficit model into a static dashboard.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5ed7"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#08285f" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="560" fill="#f4f8fd"/>
+  <g opacity="0.58">
+    <path d="M0 118 H1200" stroke="#dbeafe"/>
+    <path d="M0 502 H1200" stroke="#dbeafe"/>
+  </g>
+  <text x="600.0" y="58" text-anchor="middle" font-size="34" font-weight="800" fill="#061b4a"><tspan x="600.0" dy="0">Architecture</tspan></text>
+  <text x="600.0" y="95" text-anchor="middle" font-size="18" font-weight="400" fill="#47618d"><tspan x="600.0" dy="0">Raw data flows through preprocessing and the quota/deficit model into a static dashboard.</tspan></text>
+  <g filter="url(#shadow)">
+
+  <rect x="54" y="185" width="220" height="230" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <rect x="54" y="185" width="220" height="9" rx="4" fill="#0b5ed7"/>
+  <text x="164.0" y="230" text-anchor="middle" font-size="24" font-weight="700" fill="#061b4a"><tspan x="164.0" dy="0">Raw data</tspan></text>
+  <text x="164.0" y="271" text-anchor="middle" font-size="17" font-weight="400" fill="#47618d"><tspan x="164.0" dy="0">population</tspan><tspan x="164.0" dy="23">employment</tspan><tspan x="164.0" dy="23">GRP and productivity</tspan><tspan x="164.0" dy="23">regional classifications</tspan></text>
+
+<path d="M274 300 L312 300" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="330" y="185" width="220" height="230" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <rect x="330" y="185" width="220" height="9" rx="4" fill="#18a999"/>
+  <text x="440.0" y="230" text-anchor="middle" font-size="24" font-weight="700" fill="#061b4a"><tspan x="440.0" dy="0">Preprocessing</tspan></text>
+  <text x="440.0" y="271" text-anchor="middle" font-size="17" font-weight="400" fill="#47618d"><tspan x="440.0" dy="0">schema checks</tspan><tspan x="440.0" dy="23">crosswalks</tspan><tspan x="440.0" dy="23">compact CSV/JSON</tspan><tspan x="440.0" dy="23">dashboard-ready layers</tspan></text>
+
+<path d="M550 300 L588 300" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="606" y="185" width="220" height="230" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <rect x="606" y="185" width="220" height="9" rx="4" fill="#f59e0b"/>
+  <text x="716.0" y="230" text-anchor="middle" font-size="24" font-weight="700" fill="#061b4a"><tspan x="716.0" dy="0">Quota / deficit model</tspan></text>
+  <text x="716.0" y="271" text-anchor="middle" font-size="17" font-weight="400" fill="#47618d"><tspan x="716.0" dy="0">recommended quota</tspan><tspan x="716.0" dy="23">year-end deficit</tspan><tspan x="716.0" dy="23">reserve allocation</tspan><tspan x="716.0" dy="23">sector demand</tspan></text>
+
+<path d="M826 300 L864 300" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="882" y="185" width="220" height="230" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <rect x="882" y="185" width="220" height="9" rx="4" fill="#385070"/>
+  <text x="992.0" y="230" text-anchor="middle" font-size="24" font-weight="700" fill="#061b4a"><tspan x="992.0" dy="0">Static dashboard</tspan></text>
+  <text x="992.0" y="271" text-anchor="middle" font-size="17" font-weight="400" fill="#47618d"><tspan x="992.0" dy="0">GitHub Pages</tspan><tspan x="992.0" dy="23">map, rankings, atlas</tspan><tspan x="992.0" dy="23">detail table</tspan><tspan x="992.0" dy="23">regional passport</tspan></text>
+
+<text x="600" y="470" text-anchor="middle" font-size="19" font-weight="700" fill="#0b5ed7"><tspan x="600" dy="0">docs/data + docs/assets → reusable static publication</tspan></text>
+  </g>
+</svg>

@@ -17,6 +17,16 @@
 
 The project is intended for demographic analysis, labour-market research, regional policy studies and teaching. It translates heterogeneous input assumptions into interpretable regional indicators and dashboard layers that can be inspected, compared and reused.
 
+### Visual overview
+
+![English dashboard hero](docs/assets/visuals/hero-en.png)
+
+![English scenario walkthrough](docs/assets/visuals/scenario-en.gif)
+
+![English architecture diagram](docs/assets/visuals/architecture-en.svg)
+
+![English methodology diagram](docs/assets/visuals/methodology-en.svg)
+
 ### Research question
 
 The central question of the project is: how may the need for foreign labour resources differ across Russian regions and sectors under alternative assumptions about population, employment, productivity, unemployment and economic growth? The model does not produce an official forecast. It is a scenario-based analytical instrument that helps make assumptions explicit and compare their implications.
@@ -99,6 +109,16 @@ Unless otherwise stated, source code is released under the MIT License. Data, do
 `Foreign-labor-migration` — воспроизводимый исследовательский программный проект для оценки и визуализации потребности регионов и отраслей России в иностранных трудовых ресурсах. Он объединяет Python-пайплайн моделирования, компактные наборы данных для дашборда и статический интерфейс GitHub Pages для изучения региональных и отраслевых сценариев.
 
 Проект предназначен для демографического анализа, исследований рынка труда, региональной политики и преподавания. Он переводит разнородные входные предпосылки в интерпретируемые региональные показатели и слои дашборда, которые можно изучать, сравнивать и повторно использовать.
+
+### Визуальный обзор
+
+![Герой дашборда на русском языке](docs/assets/visuals/hero-ru.png)
+
+![Сценарий работы с дашбордом на русском языке](docs/assets/visuals/scenario-ru.gif)
+
+![Схема архитектуры на русском языке](docs/assets/visuals/architecture-ru.svg)
+
+![Схема методологии на русском языке](docs/assets/visuals/methodology-ru.svg)
 
 ### Научная постановка задачи
 

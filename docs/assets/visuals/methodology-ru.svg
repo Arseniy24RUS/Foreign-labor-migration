@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Методология</title>
+  <desc id="desc">Сценарные показатели объединяют рост экономики, производительность и внутренний резерв по регионам и отраслям.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5ed7"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#08285f" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="#f4f8fd"/>
+  <g opacity="0.58">
+    <path d="M0 118 H1200" stroke="#dbeafe"/>
+    <path d="M0 502 H1200" stroke="#dbeafe"/>
+  </g>
+  <text x="600.0" y="58" text-anchor="middle" font-size="34" font-weight="800" fill="#061b4a"><tspan x="600.0" dy="0">Методология</tspan></text>
+  <text x="600.0" y="95" text-anchor="middle" font-size="18" font-weight="400" fill="#47618d"><tspan x="600.0" dy="0">Сценарные показатели объединяют рост экономики, производительность и внутренний резерв по регионам и отраслям.</tspan></text>
+  <g filter="url(#shadow)">
+<rect x="420" y="236" width="360" height="120" rx="24" fill="#061b4a"/>
+<text x="600" y="284" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff"><tspan x="600" dy="0">Сценарная модель</tspan></text>
+<text x="600" y="322" text-anchor="middle" font-size="18" font-weight="400" fill="#dbeafe"><tspan x="600" dy="0">целевой рост - производительность - резерв</tspan></text>
+
+  <rect x="80" y="160" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="114" cy="196" r="16" fill="#0b5ed7" opacity="0.16"/>
+  <circle cx="114" cy="196" r="7" fill="#0b5ed7"/>
+  <text x="252.0" y="202" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="252.0" dy="0">Рекомендуемая квота</tspan></text>
+  <text x="240.0" y="244" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="240.0" dy="0">годовой приток</tspan><tspan x="240.0" dy="22">для покрытия потребности</tspan></text>
+
+<path d="M240 232 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="390" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="114" cy="426" r="16" fill="#385070" opacity="0.16"/>
+  <circle cx="114" cy="426" r="7" fill="#385070"/>
+  <text x="252.0" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="252.0" dy="0">Дефицит на конец года</tspan></text>
+  <text x="240.0" y="474" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="240.0" dy="0">непокрытый остаток</tspan><tspan x="240.0" dy="22">в выбранном году</tspan></text>
+
+<path d="M240 462 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="390" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="454" cy="426" r="16" fill="#18a999" opacity="0.16"/>
+  <circle cx="454" cy="426" r="7" fill="#18a999"/>
+  <text x="592.0" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="592.0" dy="0">Резерв</tspan></text>
+  <text x="580.0" y="474" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="580.0" dy="0">безработные</tspan><tspan x="580.0" dy="22">учитываются до внешней потребности</tspan></text>
+
+<path d="M580 462 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="390" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="794" cy="426" r="16" fill="#f59e0b" opacity="0.16"/>
+  <circle cx="794" cy="426" r="7" fill="#f59e0b"/>
+  <text x="932.0" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="932.0" dy="0">Производительность</tspan></text>
+  <text x="920.0" y="474" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="920.0" dy="0">взвешенный прогноз</tspan><tspan x="920.0" dy="22">снижает спрос на труд</tspan></text>
+
+<path d="M920 462 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="160" width="320" height="145" rx="16" fill="#ffffff" stroke="#cfe0f5" stroke-width="2"/>
+  <circle cx="794" cy="196" r="16" fill="#7c3aed" opacity="0.16"/>
+  <circle cx="794" cy="196" r="7" fill="#7c3aed"/>
+  <text x="932.0" y="202" text-anchor="middle" font-size="21" font-weight="800" fill="#061b4a"><tspan x="932.0" dy="0">Регионально-отраслевая потребность</tspan></text>
+  <text x="920.0" y="244" text-anchor="middle" font-size="16" font-weight="400" fill="#47618d"><tspan x="920.0" dy="0">ячейки регион × ОКВЭД</tspan><tspan x="920.0" dy="22">паспорт и таблица</tspan></text>
+
+<path d="M920 232 L600 296" stroke="#0b5ed7" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  </g>
+</svg>
