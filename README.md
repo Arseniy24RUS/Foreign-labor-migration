@@ -78,6 +78,8 @@ python src/build_dashboard_inputs.py \
 
 The project operationalizes labour-resource demand as a regional and sectoral scenario problem. Its inputs may include regional population assumptions, employment structure, economic growth targets, productivity dynamics, unemployment constraints and supply allocation rules. The outputs are intended to show where foreign labour demand may become more pronounced, how sectoral structure affects regional demand, and how assumptions influence spatial patterns.
 
+Detailed methodology: [docs/methodology.md](docs/methodology.md).
+
 ### Data provenance
 
 All dashboard-ready datasets should be stored in compact, versioned formats in `data/` and `docs/`. Each source dataset should be accompanied by a clear description of source, year, spatial unit, variable definitions and preprocessing steps. Official statistics and third-party datasets remain subject to their own terms of use.
@@ -98,7 +100,11 @@ If you use this repository, dashboard, data structure or methodological logic, p
 
 ### License
 
-Unless otherwise stated, source code is released under the MIT License. Data, documentation and dashboard text are released under Creative Commons Attribution 4.0 International (CC BY 4.0). External source data may be governed by the terms of their original providers.
+| Material | License / terms |
+| --- | --- |
+| Source code, scripts and tests | [MIT](LICENSE) |
+| Documentation, dashboard text, figures and compact project data | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) |
+| Official statistics, geodata, logos, institutional names and external libraries | Original provider terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
 
 ---
 
@@ -171,6 +177,8 @@ python src/build_dashboard_inputs.py \
 
 Проект рассматривает потребность в трудовых ресурсах как региональную и отраслевую сценарную задачу. Среди входов могут использоваться региональные демографические предпосылки, структура занятости, целевые параметры экономического роста, динамика производительности, ограничения по безработице и правила распределения предложения труда. Выходы помогают увидеть, где потребность в иностранной рабочей силе может быть более выраженной, как отраслевая структура влияет на региональный спрос и как предпосылки меняют пространственную картину.
 
+Подробная методология: [docs/methodology.md](docs/methodology.md).
+
 ### Происхождение данных
 
 Все данные, готовые для дашборда, должны храниться в компактных версионированных форматах в `data/` и `docs/`. Каждый источник данных должен сопровождаться описанием источника, года, пространственной единицы, переменных и этапов предобработки. Официальная статистика и сторонние наборы данных сохраняют собственные условия использования.
@@ -191,4 +199,8 @@ python src/build_dashboard_inputs.py \
 
 ### Лицензия
 
-Если явно не указано иное, исходный код распространяется по лицензии MIT. Данные, документация и тексты дашборда распространяются по лицензии Creative Commons Attribution 4.0 International (CC BY 4.0). Внешние исходные данные могут регулироваться условиями их первоначальных поставщиков.
+| Материал | Лицензия / условия |
+| --- | --- |
+| Исходный код, скрипты и тесты | [MIT](LICENSE) |
+| Документация, тексты дашборда, фигуры и компактные проектные данные | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) |
+| Официальная статистика, геоданные, логотипы, институциональные названия и внешние библиотеки | Условия первоначальных поставщиков; см. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
