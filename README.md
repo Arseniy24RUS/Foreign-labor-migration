@@ -1,4 +1,4 @@
-# Foreign Labor Migration · Regional and Sectoral Demand Dashboard
+﻿# Foreign Labor Migration · Regional and Sectoral Demand Dashboard
 
 [English](#english) · [Русский](#русский)
 
@@ -103,7 +103,7 @@ If you use this repository, dashboard, data structure or methodological logic, p
 | Material | License / terms |
 | --- | --- |
 | Source code, scripts and tests | [MIT](LICENSE) |
-| Documentation, dashboard text, figures and compact project data | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) |
+| Documentation, dashboard text, figures and compact project data | [CC BY 4.0](docs/license-docs-and-data.md) |
 | Official statistics, geodata, logos, institutional names and external libraries | Original provider terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
 
 ---
@@ -202,5 +202,5 @@ python src/build_dashboard_inputs.py \
 | Материал | Лицензия / условия |
 | --- | --- |
 | Исходный код, скрипты и тесты | [MIT](LICENSE) |
-| Документация, тексты дашборда, фигуры и компактные проектные данные | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) |
+| Документация, тексты дашборда, фигуры и компактные проектные данные | [CC BY 4.0](docs/license-docs-and-data.md) |
 | Официальная статистика, геоданные, логотипы, институциональные названия и внешние библиотеки | Условия первоначальных поставщиков; см. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
