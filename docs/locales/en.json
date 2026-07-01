@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "Labor Resource Demand by Industry and Region in Russia",
-    "subtitle": "Research presentation dashboard: recommended annual quota, year-end deficit, and economic labor demand.",
+    "title": "GeoTalent",
+    "subtitle": "Regional workforce availability forecasting system: a geo-analytical platform using machine learning",
     "organizations": "Organizations",
     "mgimoOfficial": "MGIMO official website",
     "fniscOfficial": "FNISC official website"
