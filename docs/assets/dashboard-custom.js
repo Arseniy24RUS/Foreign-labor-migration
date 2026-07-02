@@ -71,17 +71,16 @@
   }
 
   function installQuotaTrendOverride() {
-    if (
-      typeof window.Plotly !== "object" ||
-      typeof window.groupBy !== "function" ||
-      typeof window.chartLayout !== "function" ||
-      typeof window.plotConfig !== "function"
-    ) {
-      return false;
-    }
+    const groupFn = typeof window.groupBy === "function" ? window.groupBy : (typeof groupBy === "function" ? groupBy : null);
+    const layoutFn = typeof window.chartLayout === "function" ? window.chartLayout : (typeof chartLayout === "function" ? chartLayout : null);
+    const configFn = typeof window.plotConfig === "function" ? window.plotConfig : (typeof plotConfig === "function" ? plotConfig : null);
+    const shapesFn = typeof window.controlYearShapes === "function" ? window.controlYearShapes : (typeof controlYearShapes === "function" ? controlYearShapes : null);
+    const annotationsFn = typeof window.controlYearAnnotations === "function" ? window.controlYearAnnotations : (typeof controlYearAnnotations === "function" ? controlYearAnnotations : null);
 
-    window.renderQuotaTrend = function renderQuotaTrendAnnualOnly(horizonRows) {
-      const annualQuotaData = window.groupBy(horizonRows, ["forecast_year"], "recommended_annual_quota_persons")
+    if (typeof window.Plotly !== "object" || !groupFn || !layoutFn || !configFn) return false;
+
+    const annualOnly = function renderQuotaTrendAnnualOnly(horizonRows) {
+      const annualQuotaData = groupFn(horizonRows, ["forecast_year"], "recommended_annual_quota_persons")
         .sort((a, b) => Number(a.forecast_year) - Number(b.forecast_year));
 
       const traces = [{
@@ -93,17 +92,23 @@
         hovertemplate: translate("chart.quota.annualHover", "Год %{x}<br>Рекомендуемая квота: %{y:,.0f} человек<extra></extra>")
       }];
 
-      window.Plotly.react("chart-year", traces, window.chartLayout("", {
+      window.Plotly.react("chart-year", traces, layoutFn("", {
         xaxis: { title: translate("chart.common.year", "Год"), dtick: window.innerWidth < 720 ? 5 : 2, fixedrange: true },
         yaxis: { title: translate("chart.quota.annualAxis", "Рекомендуемая квота"), rangemode: "tozero", fixedrange: true },
         showlegend: false,
-        shapes: typeof window.controlYearShapes === "function" ? window.controlYearShapes() : [],
-        annotations: typeof window.controlYearAnnotations === "function" ? window.controlYearAnnotations() : [],
+        shapes: shapesFn ? shapesFn() : [],
+        annotations: annotationsFn ? annotationsFn() : [],
         margin: { t: 40, r: 14, b: 40, l: 64 },
         bargap: 0.18
-      }), window.plotConfig());
+      }), configFn());
     };
 
+    window.renderQuotaTrend = annualOnly;
+    try {
+      renderQuotaTrend = annualOnly;
+    } catch (_) {
+      // Some runtimes expose the function only through window.
+    }
     return true;
   }
 
