@@ -50,18 +50,24 @@
     document.querySelectorAll(".metric-toggle").forEach((node) => node.remove());
   }
 
-  function patchTexts() {
+  function patchTrendTexts() {
     const trend = TREND_TEXT[currentLanguage()] || TREND_TEXT.en;
-    setText('[data-i18n="trend.heading"]', trend.heading);
-    setText('[data-i18n="trend.description"]', trend.description);
+    setText("#trend-heading", trend.heading);
+    setText(".trend-panel .section-heading p", trend.description);
+  }
 
-    if (currentLanguage() === "ru") {
-      setHtml('[data-i18n-html="method.logicText"]', METHOD_TEXT_RU.logic);
-      setHtml('[data-i18n-html="method.migrationText"]', METHOD_TEXT_RU.migration);
-      setHtml('[data-i18n-html="method.noMigText"]', METHOD_TEXT_RU.noMig);
-      setHtml('[data-i18n-html="method.limitsText"]', METHOD_TEXT_RU.limits);
-      setText('[data-i18n="method.horizonText"]', METHOD_TEXT_RU.horizon);
-    }
+  function patchMethodologyTexts() {
+    if (currentLanguage() !== "ru") return;
+    setHtml('[data-i18n-html="method.logicText"]', METHOD_TEXT_RU.logic);
+    setHtml('[data-i18n-html="method.migrationText"]', METHOD_TEXT_RU.migration);
+    setHtml('[data-i18n-html="method.noMigText"]', METHOD_TEXT_RU.noMig);
+    setHtml('[data-i18n-html="method.limitsText"]', METHOD_TEXT_RU.limits);
+    setText('[data-i18n="method.horizonText"]', METHOD_TEXT_RU.horizon);
+  }
+
+  function patchTexts() {
+    patchTrendTexts();
+    patchMethodologyTexts();
   }
 
   function installQuotaTrendOverride() {
